@@ -27,7 +27,7 @@
                 </div>
             </div>  
 
-            <div class="alert alert-secondary mx-5" role="alert">
+            <div class="alert alert-secondary mx-5 mb-2" role="alert">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac lectus placerat, porta neque non, semper arcu. Mauris sodales, dolor eu luctus luctus, eros elit suscipit enim, non laoreet lectus ipsum semper risus. Nam id facilisis eros. Fusce lobortis, nulla et tempor sodales, lorem risus congue nulla, nec sodales metus lorem non elit. In quis diam magna.
             </div>
 
@@ -35,9 +35,11 @@
             @if (Session::has('mensaje'))
                 <div class="alert alert-success alert-dismissible fade show mx-5" role="alert">
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    {{Session::get('mensaje')}}.
+                    <h4 class="alert-heading">¡Registro exitoso!</h4>
+                    {{Session::get('mensaje')}}
+                    <p>Una vez cerrada esta ventana, no es posible volver a generar el enlace.</p>
+                    <hr>
                     <a target="_blank" href="{{ url("/Comunicación/pdf/") }}">Descargar PDF</a>
-                    Una vez cerrada esta ventana, no es posible volver a generar el link.
                 </div>
             @endif
 
@@ -294,7 +296,7 @@
 
                 <button id="btnDesarrollo" type="submit" class="btn btn-primary">Enviar Brief</button>
             </form>
-            <a href="{{ url('') }}" id="btnComunicacion" class="btn btn-primary m-5">Volver</a>
+            <a href="{{ url('') }}" id="btnComunicacion" class="btn btn-primary mx-5">Volver</a>
         </div>
 
 

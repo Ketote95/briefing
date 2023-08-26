@@ -32,7 +32,7 @@ return new class extends Migration
             $table->text('comunicar_servicios')->nullable();
             $table->text('comercializar_servicios')->nullable();
             $table->text('presencia_online')->nullable();
-            $table->text('retos_digitalización')->nullable();
+            $table->text('retos_digitalizacion')->nullable();
             $table->text('servicios_principales')->nullable();
             $table->text('publico_objetivo')->nullable();
             $table->text('necesidades_servicios')->nullable();

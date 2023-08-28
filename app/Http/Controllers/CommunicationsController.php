@@ -45,8 +45,9 @@ class CommunicationsController extends Controller
         $comunicacion->instagram = $request->instagram;
         $comunicacion->tiktok = $request->tiktok;
         $comunicacion->linkedin = $request->linkedin;
-        $datosContacto = implode(', ', $request->input('contacto'));
-        $comunicacion->contacto = $datosContacto;
+        $comunicacion->nombre_completo = $request->nombre_completo;
+        $comunicacion->correo = $request->correo;
+        $comunicacion->telefono = $request->telefono;
 
         $comunicacion->descripcion_empresa = $request->descripcion_empresa;
         $comunicacion->valores_marca = $request->valores_marca;

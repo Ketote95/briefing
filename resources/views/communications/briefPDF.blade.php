@@ -154,13 +154,17 @@
         <table style="border-bottom: 2px solid #35DE92;" class="table" >
             <thead>
                 <tr>
-                    <th style="color: #1c1b1b">Datos de contacto</th>
+                    <th>Nombre Completo</th>
+                    <th>Correo Electrónico</th>
+                    <th>Teléfono</th>
                 </tr>
             </thead>
             
             <tbody>
                 <tr>
-                    <td>{{$data['contacto']}}</td>
+                    <td>{{$data['nombre_completo']}}</td>
+                    <td>{{$data['correo']}}</td>
+                    <td>{{$data['telefono']}}</td>
                 </tr>
             </tbody>
         </table>

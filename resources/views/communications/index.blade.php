@@ -39,7 +39,7 @@
                     {{Session::get('mensaje')}}
                     <p>Una vez cerrada esta ventana, no es posible volver a generar el enlace.</p>
                     <hr>
-                    <a target="_blank" href="{{ url("/Comunicación/pdf/") }}">Descargar PDF</a>
+                    <a target="_blank" href="{{ url("/Comunicación/pdf/") }}" class="alert-link">Descargar PDF</a>
                 </div>
             @endif
 
@@ -109,15 +109,15 @@
                 <div class="row mb-3">
                     <label for="contacto" class="form-label">Contacto <span style="color: red;">*</span></label>
                     <div class="col-lg-4 mb-2">
-                        <input type="text" class="form-control" id="nombre" name="contacto[]" value="{{ isset($comunicacion->nombre)?$comunicacion->nombre:old('nombre') }}" placeholder="Nombre completo" required>
+                        <input type="text" class="form-control" id="nombre_completo" name="nombre_completo" value="{{ isset($comunicacion->nombre)?$comunicacion->nombre:old('nombre') }}" placeholder="Nombre completo" required>
                     </div>
     
                     <div class="col-lg-4 mb-2">
-                        <input type="email" class="form-control" id="correo" name="contacto[]" value="{{ isset($comunicacion->correo)?$comunicacion->correo:old('correo') }}" placeholder="correo@dominio.com" required>
+                        <input type="email" class="form-control" id="correo" name="correo" value="{{ isset($comunicacion->correo)?$comunicacion->correo:old('correo') }}" placeholder="correo@dominio.com" required>
                     </div>
     
                     <div class="col-lg-4 mb-2">
-                        <input type="text" class="form-control" id="telefono" name="contacto[]" value="{{ isset($comunicacion->telefono)?$comunicacion->telefono:old('telefono') }}" placeholder="Número de teléfono" required>
+                        <input type="text" class="form-control" id="telefono" name="telefono" value="{{ isset($comunicacion->telefono)?$comunicacion->telefono:old('telefono') }}" placeholder="Número de teléfono" required>
                     </div>
                 </div>
 

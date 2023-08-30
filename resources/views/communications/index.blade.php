@@ -296,7 +296,6 @@
 
                 <button id="btnDesarrollo" type="submit" class="btn btn-primary">Enviar Brief</button>
             </form>
-            <a href="{{ url('') }}" id="btnComunicacion" class="btn btn-primary mx-5">Volver</a>
         </div>
 
 

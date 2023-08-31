@@ -24,3 +24,11 @@ Route::post('/BriefComunicación', [App\Http\Controllers\CommunicationsControlle
 
 //Generador de Brief comunicación en PDF
 Route::get('/Comunicación/pdf', [App\Http\Controllers\CommunicationsController::class, 'generatePDF'])->name('pdf_comunicación');
+
+// Rutas para los briefs de comunicación
+Route::get('/BriefCreativo', [App\Http\Controllers\CampaignsController::class, 'index'])->name('creativo');
+Route::get('/BriefCreativo/{id}', [App\Http\Controllers\CampaignsController::class, 'show']);
+Route::post('/BriefCreativo', [App\Http\Controllers\CampaignsController::class, 'store']);
+
+//Generador de Brief comunicación en PDF
+Route::get('/Creativo/pdf', [App\Http\Controllers\CampaignsController::class, 'generatePDF'])->name('pdf_comunicación');

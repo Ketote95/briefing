@@ -48,7 +48,6 @@ class CommunicationsController extends Controller
         $comunicacion->nombre_completo = $request->nombre_completo;
         $comunicacion->correo = $request->correo;
         $comunicacion->telefono = $request->telefono;
-
         $comunicacion->descripcion_empresa = $request->descripcion_empresa;
         $comunicacion->valores_marca = $request->valores_marca;
         $comunicacion->situacion_empresa = $request->situacion_empresa;

@@ -17,9 +17,9 @@ return new class extends Migration
             $table->string('categoria', 100);
             $table->string('marca', 100);
             $table->string('sub_marca', 100);
-            $table->integer('plazo', 100);
-            $table->integer('duracion', 100);
-            $table->integer('presupuesto', 100);
+            $table->integer('plazo');
+            $table->integer('duracion');
+            $table->integer('presupuesto');
             $table->text('antecedentes');
             $table->text('justificacion');
             $table->text('descripcion_servicio');

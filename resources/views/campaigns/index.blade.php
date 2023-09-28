@@ -23,7 +23,7 @@
         <div class="contenedor-formulario mt-5 pt-5 pb-5">
             <div class="row justify-content-md-center">
                 <div class="col col-lg col-md-6 col-sm-12">
-                    <h1 class="text-center" >Brief de Campañas</h1>
+                    <h1 class="text-center title-brief" >Brief de Campañas</h1>
                 </div>
             </div>  
 

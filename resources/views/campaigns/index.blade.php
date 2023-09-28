@@ -27,8 +27,14 @@
                 </div>
             </div>  
 
-            <div class="alert alert-secondary mx-5 mb-2" role="alert">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac lectus placerat, porta neque non, semper arcu. Mauris sodales, dolor eu luctus luctus, eros elit suscipit enim, non laoreet lectus ipsum semper risus. Nam id facilisis eros. Fusce lobortis, nulla et tempor sodales, lorem risus congue nulla, nec sodales metus lorem non elit. In quis diam magna.
+            <div class="alert alert-light mx-5 mb-2" role="alert">
+                Estimado partner: <br>
+                <br>
+                Si llegaste hasta aquí, es porque has decidido depositar tu confianza en nuestro equipo y para nosotros eso representa un gran valor y compromiso de éxito.<br>
+                <br>
+                El propósito de las siguientes preguntas es obtener la mayor cantidad de información referente a tu empresa; ayudándonos a comprender su situación actual, fortalezas, oportunidades, objetivos y desventajas; permitiéndonos de esta manera, articular estrategias de comunicación que aporten valor y crecimiento.<br>
+                <br>
+                Por tal motivo, es de gran importancia que te tomes el tiempo suficiente para completar cada una de ellas.
             </div>
 
             {{-- Sección de la notificación --}}

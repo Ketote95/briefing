@@ -27,8 +27,14 @@
                 </div>
             </div>  
 
-            <div class="alert alert-secondary mx-5 mb-2" role="alert">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac lectus placerat, porta neque non, semper arcu. Mauris sodales, dolor eu luctus luctus, eros elit suscipit enim, non laoreet lectus ipsum semper risus. Nam id facilisis eros. Fusce lobortis, nulla et tempor sodales, lorem risus congue nulla, nec sodales metus lorem non elit. In quis diam magna.
+            <div class="alert alert-light mx-5 mb-2" role="alert">
+                Estimado partner: <br>
+                <br>
+                Si llegaste hasta aquí, es porque has decidido depositar tu confianza en nuestro equipo y para nosotros eso representa un gran valor y compromiso de éxito.<br>
+                <br>
+                El propósito de las siguientes preguntas es obtener la mayor cantidad de información referente a tu empresa; ayudándonos a comprender su situación actual, fortalezas, oportunidades, objetivos y desventajas; permitiéndonos de esta manera, articular estrategias de comunicación que aporten valor y crecimiento.<br>
+                <br>
+                Por tal motivo, es de gran importancia que te tomes el tiempo suficiente para completar cada una de ellas.
             </div>
 
             {{-- Sección de la notificación --}}
@@ -70,38 +76,38 @@
     
                     <div class="col-lg-4 mb-2">
                         <label for="marca" class="form-label">Marca <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="marca" name="marca" value="{{ isset($comunicacion->marca)?$comunicacion->marca:old('marca') }}" placeholder="Marca con la que trabaja" required>
+                        <input type="text" class="form-control" id="marca" name="marca" value="{{ isset($comunicacion->marca)?$comunicacion->marca:old('marca') }}" placeholder="Nombre de la marca" required>
                     </div>
                 </div>
 
                 {{-- Campos de sitio web, facebook e instagram --}}
                 <div class="row">
                     <div class="col-lg-4 mb-2">
-                        <label for="sitio web" class="form-label">Sitio Web <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="sitio web" name="sitio_web" value="{{ isset($comunicacion->sitio_web)?$comunicacion->sitio_web:old('sitio_web') }}" placeholder="URL de su sitio web" required>
+                        <label for="sitio web" class="form-label">Sitio Web</label>
+                        <input type="text" class="form-control" id="sitio web" name="sitio_web" value="{{ isset($comunicacion->sitio_web)?$comunicacion->sitio_web:old('sitio_web') }}" placeholder="URL de su sitio web">
                     </div>
     
                     <div class="col-lg-4 mb-2">
-                        <label for="facebook" class="form-label">Facebook <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="facebook" name="facebook" value="{{ isset($comunicacion->facebook)?$comunicacion->facebook:old('facebook') }}" placeholder="Enlace de su perfil de Facebook" required>
+                        <label for="facebook" class="form-label">Facebook</label>
+                        <input type="text" class="form-control" id="facebook" name="facebook" value="{{ isset($comunicacion->facebook)?$comunicacion->facebook:old('facebook') }}" placeholder="Enlace de su perfil de Facebook">
                     </div>
     
                     <div class="col-lg-4 mb-2">
-                        <label for="instagram" class="form-label">Instagram <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="instagram" name="instagram" value="{{ isset($comunicacion->instagram)?$comunicacion->instagram:old('instagram') }}" placeholder="Enlace de su perfil de Instagram" required>
+                        <label for="instagram" class="form-label">Instagram</label>
+                        <input type="text" class="form-control" id="instagram" name="instagram" value="{{ isset($comunicacion->instagram)?$comunicacion->instagram:old('instagram') }}" placeholder="Enlace de su perfil de Instagram">
                     </div>
                 </div>           
                 
                 {{-- Campos de tiktok y linkedin --}}
                 <div class="row">
                     <div class="col-lg-6 mb-2">
-                        <label for="tiktok" class="form-label">TikTok <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="tiktok" name="tiktok" value="{{ isset($comunicacion->tiktok)?$comunicacion->tiktok:old('tiktok') }}" placeholder="Enlace de su perfil de TikTok" required>
+                        <label for="tiktok" class="form-label">TikTok</label>
+                        <input type="text" class="form-control" id="tiktok" name="tiktok" value="{{ isset($comunicacion->tiktok)?$comunicacion->tiktok:old('tiktok') }}" placeholder="Enlace de su perfil de TikTok">
                     </div>
     
                     <div class="col-lg-6 mb-2">
-                        <label for="linkedin" class="form-label">LinkedIn <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="linkedin" name="linkedin" value="{{ isset($comunicacion->linkedin)?$comunicacion->linkedin:old('linkedin') }}" placeholder="Enlace de su perfil de LinkedIn" required>
+                        <label for="linkedin" class="form-label">LinkedIn</label>
+                        <input type="text" class="form-control" id="linkedin" name="linkedin" value="{{ isset($comunicacion->linkedin)?$comunicacion->linkedin:old('linkedin') }}" placeholder="Enlace de su perfil de LinkedIn">
                     </div>
                 </div>
                 {{-- Fin de campos de texto cortos --}}
@@ -309,8 +315,6 @@
         <script src="https://kit.fontawesome.com/0b7cc019fd.js" crossorigin="anonymous"></script>
 
         <script>
-            variable = "hola";
-            console.log(variable);
             // Deshabilitar Enter en los campos tipo Text
             $(document).on('keyup keypress', 'form input[type="text"]', function(e) {
                 if(e.keyCode == 13) {

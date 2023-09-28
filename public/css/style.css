@@ -15,6 +15,14 @@ body {
     font-weight: bold;
 }
 
+input::placeholder {
+    opacity: 0.3 !important;
+}
+
+textarea::placeholder {
+    opacity: 0.3 !important;
+}
+
 /* Efectos para botones de la ventana principal */
 #btnComunicacion  {
     background-color: rgb(47,39,122);

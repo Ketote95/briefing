@@ -187,11 +187,15 @@
             </form>
         </div>
 
+        <button id="Top" onclick="topFunction()"><i class="fa-solid fa-arrow-up fa-fade"></i></button>
 
         {{-- Bootstrap 5 scripts --}}
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        {{-- Script para hacer uso de FontAwesome --}}
+        <script src="https://kit.fontawesome.com/0b7cc019fd.js" crossorigin="anonymous"></script>
 
         <script>
             $(document).on('keyup keypress', 'form input[type="text"]', function(e) {
@@ -207,6 +211,28 @@
                     return false;
                 }
             });
+
+            //Inicio de To Top
+            //Obtener el botón:
+            let mybutton = document.getElementById("Top");
+
+            //Mostrar el botón cuando el usuario baje al menos 20px
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            //Desplazamiento hacia arriba cuando el usuario haga clic en el botón
+            function topFunction() {
+                document.body.scrollTop = 0; //Safari
+                document.documentElement.scrollTop = 0; //Chrome, Firefox, IE y Opera
+            }
+            //Fin de To Top
         </script>
     </body>
 </html>

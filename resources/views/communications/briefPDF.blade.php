@@ -30,6 +30,8 @@
             
             li span {
                 color: #1c1b1b;
+                font-size: 16px;
+                font-weight: bold;
             }
 
             header {

@@ -23,7 +23,7 @@
         <div class="contenedor-formulario mt-5 pt-5 pb-5">
             <div class="row justify-content-md-center">
                 <div class="col col-lg col-md-6 col-sm-12">
-                    <h1 class="text-center" >Comunicación</h1>
+                    <h1 class="text-center title-brief" >Brief de Comunicación</h1>
                 </div>
             </div>  
 
@@ -297,6 +297,8 @@
                 <button id="btnDesarrollo" type="submit" class="btn btn-primary">Enviar Brief</button>
             </form>
         </div>
+        
+        <button id="Top" onclick="topFunction()"><i class="fa-solid fa-arrow-up fa-fade"></i></button>
 
 
         {{-- Bootstrap 5 scripts --}}
@@ -304,7 +306,13 @@
         <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+        {{-- Script para hacer uso de FontAwesome --}}
+        <script src="https://kit.fontawesome.com/0b7cc019fd.js" crossorigin="anonymous"></script>
+
         <script>
+            variable = "hola";
+            console.log(variable);
+            // Deshabilitar Enter en los campos tipo Text
             $(document).on('keyup keypress', 'form input[type="text"]', function(e) {
                 if(e.keyCode == 13) {
                     e.preventDefault();
@@ -312,12 +320,35 @@
                 }
             });
 
+            // Deshabilitar Enter en los campos tipo Email
             $(document).on('keyup keypress', 'form input[type="email"]', function(e) {
                 if(e.keyCode == 13) {
                     e.preventDefault();
                     return false;
                 }
             });
-        </script>
+
+            //Inicio de To Top
+            //Obtener el botón:
+            let mybutton = document.getElementById("Top");
+
+            //Mostrar el botón cuando el usuario baje al menos 20px
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+            }
+
+            //Desplazamiento hacia arriba cuando el usuario haga clic en el botón
+            function topFunction() {
+                document.body.scrollTop = 0; //Safari
+                document.documentElement.scrollTop = 0; //Chrome, Firefox, IE y Opera
+            }
+            //Fin de To Top
+        </script>        
     </body>
 </html>

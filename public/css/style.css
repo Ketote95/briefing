@@ -10,6 +10,11 @@ body {
     margin-bottom: 40px;
 }
 
+.title-brief {
+    color: #2F277A;
+    font-weight: bold;
+}
+
 /* Efectos para botones de la ventana principal */
 #btnComunicacion  {
     background-color: rgb(47,39,122);
@@ -76,3 +81,25 @@ label {
     width: 100%;
     margin: 20px auto 0 auto;
 }
+
+/* Efectos para el botón de Back to Top */
+#Top {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #2f277a96; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    transition: 0.5s;
+  }
+  
+  #Top:hover {
+    background-color: #2f277a; /* Add a dark-grey background on hover */
+  }

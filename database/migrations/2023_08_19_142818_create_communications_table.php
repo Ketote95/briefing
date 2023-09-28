@@ -22,8 +22,8 @@ return new class extends Migration
             $table->string('tiktok', 100);
             $table->string('linkedin', 100);
             $table->string('nombre_completo', 100);
-            $table->string('correo', 100);
-            $table->string('telefono', 100);
+            $table->string('correo', 50);
+            $table->string('telefono', 15);
             $table->text('descripcion_empresa')->nullable();
             $table->text('valores_marca')->nullable();
             $table->text('situacion_empresa')->nullable();

@@ -27,7 +27,7 @@
             </div>
             
             <div class="d-grid gap-2 col-6 mx-auto">
-                <a href="{{ url('BriefComunicación') }}" id="btnComunicacion" class="btn btn-primary mt-5">Comunicación</a>
+                <a href="{{ url('briefcomunicacion') }}" id="btnComunicacion" class="btn btn-primary mt-5">Comunicación</a>
                 <a href="{{ url('BriefCreativo') }}" id="btnDiseño" class="btn btn-primary mt-2">Creativo y de campañas</a>
                 <a href="#" id="btnDesarrollo" class="btn btn-primary mt-2">Desarrollo Web</a>
                 <a href="#" id="btnProduccion" class="btn btn-primary mt-2">Creación de marca</a>

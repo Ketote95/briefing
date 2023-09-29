@@ -45,7 +45,7 @@
                     {{Session::get('mensaje')}}
                     <p>Una vez cerrada esta ventana, no es posible volver a generar el enlace.</p>
                     <hr>
-                    <a target="_blank" href="{{ url("/Comunicación/pdf/") }}" class="alert-link">Descargar PDF</a>
+                    <a target="_blank" href="{{ url("/comunicacion/pdf/") }}" class="alert-link">Descargar PDF</a>
                 </div>
             @endif
 
@@ -60,7 +60,7 @@
                 </div>
             @endif
 
-            <form action="{{url('BriefComunicación')}}" method="POST" class="p-5">
+            <form action="{{url('briefcomunicacion')}}" method="POST" class="p-5">
                 {{-- Campos de empresa, categoría y marca --}}
                 @csrf
                 <div class="row">

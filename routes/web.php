@@ -18,12 +18,12 @@ Route::get('/', function () {
 });
 
 // Rutas para los briefs de comunicación
-Route::get('/BriefComunicación', [App\Http\Controllers\CommunicationsController::class, 'index'])->name('comunicacion');
-Route::get('/BriefComunicación/{id}', [App\Http\Controllers\CommunicationsController::class, 'show']);
-Route::post('/BriefComunicación', [App\Http\Controllers\CommunicationsController::class, 'store']);
+Route::get('/briefcomunicacion', [App\Http\Controllers\CommunicationsController::class, 'index'])->name('comunicacion');
+Route::get('/briefcomunicacion/{id}', [App\Http\Controllers\CommunicationsController::class, 'show']);
+Route::post('/briefcomunicacion', [App\Http\Controllers\CommunicationsController::class, 'store']);
 
 //Generador de Brief comunicación en PDF
-Route::get('/Comunicación/pdf', [App\Http\Controllers\CommunicationsController::class, 'generatePDF'])->name('pdf_comunicación');
+Route::get('/comunicacion/pdf', [App\Http\Controllers\CommunicationsController::class, 'generatePDF'])->name('pdf_comunicación');
 
 // Rutas para los briefs de comunicación
 Route::get('/BriefCreativo', [App\Http\Controllers\CampaignsController::class, 'index'])->name('creativo');

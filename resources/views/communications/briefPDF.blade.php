@@ -98,7 +98,7 @@
             
         </table>
         
-        <table style="border-bottom: 1px dotted #2F277A; margin-top: 5px" class="table">
+        <table style="border-bottom: 1px dotted #2F277A; margin-top: 5px" class="table">            
             <thead>
                 <tr>
                     <th>Empresa</th>
@@ -117,40 +117,44 @@
         </table>
 
         {{-- Fila de sitio web, facebook e instagram --}}
-        <table style="border-bottom: 1px dotted #2F277A;" class="table">
-            <thead>
-                <tr>
-                    <th>Sitio Web</th>
-                    <th>Facebook</th>
-                    <th>Instagram</th>
-                </tr>
-            </thead>
-            
-            <tbody>
-                <tr>
-                    <td>{{$data['sitio_web']}}</td>
-                    <td>{{$data['facebook']}}</td>
-                    <td>{{$data['instagram']}}</td>
-                </tr>
-            </tbody>
-        </table>
+        @if (isset($data['sitio_web']) or isset($data['facebook']) or isset($data['instagram']))
+            <table style="border-bottom: 1px dotted #2F277A;" class="table">
+                <thead>
+                    <tr>
+                        <th>Sitio Web</th>
+                        <th>Facebook</th>
+                        <th>Instagram</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>{{$data['sitio_web']}}</td>
+                        <td>{{$data['facebook']}}</td>
+                        <td>{{$data['instagram']}}</td>
+                    </tr>
+                </tbody>
+            </table>            
+        @endif
 
         {{-- Fila de tiktok y linkedin --}}
-        <table style="border-bottom: 1px dotted #2F277A;" class="table">
-            <thead>
-                <tr>
-                    <th>TikTok</th>
-                    <th>LinkedIn</th>
-                </tr>
-            </thead>
-            
-            <tbody>
-                <tr>
-                    <td>{{$data['tiktok']}}</td>
-                    <td>{{$data['linkedin']}}</td>
-                </tr>
-            </tbody>
-        </table>
+        @if (isset($data['tiktok']) or isset($data['linkedin']))
+            <table style="border-bottom: 1px dotted #2F277A;" class="table">
+                <thead>
+                    <tr>
+                        <th>TikTok</th>
+                        <th>LinkedIn</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>{{$data['tiktok']}}</td>
+                        <td>{{$data['linkedin']}}</td>
+                    </tr>
+                </tbody>
+            </table>            
+        @endif
         
         {{-- Datos de contacto --}}
         <table style="border-bottom: 2px solid #35DE92;" class="table" >

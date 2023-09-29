@@ -83,7 +83,7 @@ class CommunicationsController extends Controller
 
         // dd($_POST);
         $comunicacion->save();
-        return redirect('BriefComunicación')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia');
+        return redirect('briefcomunicacion')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia');
     }
 
     /**
@@ -104,7 +104,7 @@ class CommunicationsController extends Controller
         ];
         $fecha = $elArray['data']['created_at'];
         $pdf = PDF::loadView('communications/briefPDF', $elArray);
-        return $pdf->download('BriefComunicación [' . $elArray['data']['empresa'] . '] ' . $fecha . '.pdf');
+        return $pdf->download('briefcomunicacion [' . $elArray['data']['empresa'] . '] ' . $fecha . '.pdf');
     }
 
     /**

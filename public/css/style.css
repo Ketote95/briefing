@@ -12,7 +12,8 @@ body {
 
 .title-brief {
     color: #2F277A;
-    font-weight: bold;
+    font-weight: bolder;
+    font-size: 50px;
 }
 
 input::placeholder {
@@ -22,6 +23,26 @@ input::placeholder {
 textarea::placeholder {
     opacity: 0.3 !important;
 }
+
+/* Opciones de visualización para el logotipo */
+.mobile {
+    display: none !important;
+}
+
+.desktop {
+    display: flex !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .desktop {
+        display: none !important;
+    }
+
+    .mobile {
+        display: flex !important;
+    }
+}
+
 
 /* Efectos para botones de la ventana principal */
 #btnComunicacion  {

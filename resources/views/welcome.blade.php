@@ -34,6 +34,14 @@
             </div>   
         </div>
 
+        <div class="d-flex justify-content-center desktop">
+            <img src=" {{ asset('/storage/Logo.svg') }} " alt="fondo" width="30%">
+        </div>
+
+        <div class="d-flex justify-content-center mobile">
+            <img src=" {{ asset('/storage/Logo.svg') }} " alt="fondo" width="100%">
+        </div>
+
         {{-- Bootstrap 5 scripts --}}
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     </body>

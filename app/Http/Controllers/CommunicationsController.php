@@ -83,7 +83,7 @@ class CommunicationsController extends Controller
 
         // dd($_POST);
         $comunicacion->save();
-        return redirect('briefcomunicacion')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia');
+        return redirect('briefcomunicacion')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia.');
     }
 
     /**

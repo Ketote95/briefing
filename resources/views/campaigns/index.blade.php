@@ -27,7 +27,7 @@
                 </div>
             </div>  
 
-            <div class="alert alert-light mx-5 mb-2" role="alert">
+            <div style="text-align: justify" class="alert alert-light mx-5 mb-2" role="alert">
                 Estimado partner: <br>
                 <br>
                 Si llegaste hasta aquí, es porque has decidido depositar tu confianza en nuestro equipo y para nosotros eso representa un gran valor y compromiso de éxito.<br>
@@ -39,13 +39,13 @@
 
             {{-- Sección de la notificación --}}
             @if (Session::has('mensaje'))
-                <div class="alert alert-success alert-dismissible fade show mx-5" role="alert">
+                <div style="text-align: justify" class="alert alert-success alert-dismissible fade show mx-5" role="alert">
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     <h4 class="alert-heading">¡Registro exitoso!</h4>
                     {{Session::get('mensaje')}}
                     <p>Una vez cerrada esta ventana, no es posible volver a generar el enlace.</p>
                     <hr>
-                    <a target="_blank" href="{{ url("/Comunicación/pdf/") }}" class="alert-link">Descargar PDF</a>
+                    <a style="text-align: center" starget="_blank" href="{{ url("/Comunicación/pdf/") }}" class="alert-link">Descargar PDF</a>
                 </div>
             @endif
 
@@ -111,82 +111,82 @@
                 {{-- Sección de preguntas con Textarea --}}
                 <div class="mb-3">
                     <label for="antecedentes" class="form-label">ANTECEDENTES, ¿Cuál es la situación de partida?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="antecedentes" name="antecedentes" placeholder="Respuesta máxima de 500 caractéres">{{ isset($comunicacion->antecedentes)?$comunicacion->antecedentes:old('antecedentes') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="antecedentes" name="antecedentes" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->antecedentes)?$comunicacion->antecedentes:old('antecedentes') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="justificacion" class="form-label">JUSTIFICACIÓN DE CAMPAÑA, ¿Por qué necesitamos ejecutar esta actividad? ¿Qué busca conseguir?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="justificacion" name="justificacion" placeholder="Respuesta máxima de 500 caractéres">{{ isset($comunicacion->justificacion)?$comunicacion->justificacion:old('justificacion') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="justificacion" name="justificacion" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->justificacion)?$comunicacion->justificacion:old('justificacion') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="descripcion_servicio" class="form-label">PRODUCTO O SERVICIO. Haga una descripción breve acerca del producto o servicio en cuestión</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="descripcion_servicio" name="descripcion_servicio" placeholder="Respuesta máxima de 500 caractéres">{{ isset($comunicacion->descripcion_servicio)?$comunicacion->descripcion_servicio:old('descripcion_servicio') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="descripcion_servicio" name="descripcion_servicio" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->descripcion_servicio)?$comunicacion->descripcion_servicio:old('descripcion_servicio') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="publico" class="form-label">PÚBLICO OBJETIVO, ¿A qué segmento/s desea dirigirse? Se debe determinar variables Geográficas, Demográficas, Comportamientos, Nivel Socio económico, etc. (Sea lo más preciso posible.). En caso de ser varios públicos, favor ordenarlos por relevancia</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="publico" name="publico" placeholder="5 palabras separadas por coma">{{ isset($comunicacion->publico)?$comunicacion->publico:old('publico') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="publico" name="publico" placeholder="Escriba 5 palabras">{{ isset($comunicacion->publico)?$comunicacion->publico:old('publico') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="promesa" class="form-label">PROMESA. Por favor describa la promesa racional (Características y beneficios técnicos) y la promesa emocional (Valor aspiracional) de su producto, marca y/o servicio.</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="promesa" name="promesa" placeholder="Respuesta máxima de 500 caractéres">{{ isset($comunicacion->promesa)?$comunicacion->promesa:old('promesa') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="promesa" name="promesa" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->promesa)?$comunicacion->promesa:old('promesa') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="objetivos" class="form-label">OBJETIVOS COMERCIALES, ¿Cuál es el Objetivo Comercial más importante para esta campaña?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="objetivos" name="objetivos" placeholder="Respuesta máxima de 500 caractéres">{{ isset($comunicacion->objetivos)?$comunicacion->objetivos:old('objetivos') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="objetivos" name="objetivos" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->objetivos)?$comunicacion->objetivos:old('objetivos') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="linea_comunicacional" class="form-label">LÍNEA COMUNICACIONAL, ¿Qué desea comunicar con esta campaña?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="linea_comunicacional" name="linea_comunicacional" placeholder="Respuesta máxima de 500 caractéres">{{ isset($comunicacion->linea_comunicacional)?$comunicacion->linea_comunicacional:old('linea_comunicacional') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="linea_comunicacional" name="linea_comunicacional" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->linea_comunicacional)?$comunicacion->linea_comunicacional:old('linea_comunicacional') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="competidores" class="form-label">MARCAS COMPETIDORAS, ¿Quiénes son sus competidores? Diferencie entre competidores directos e indirectos</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="competidores" name="competidores" placeholder="Respuesta máxima de 500 caractéres">{{ isset($comunicacion->competidores)?$comunicacion->competidores:old('competidores') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="competidores" name="competidores" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->competidores)?$comunicacion->competidores:old('competidores') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="servicios_competidores" class="form-label">PRODUCTOS / SERVICIOS COMPETIDORES. Por favor mencione los productos o servicios que sean competidores directos</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="servicios_competidores" name="servicios_competidores" placeholder="Respuesta máxima de 500 caractéres">{{ isset($comunicacion->servicios_competidores)?$comunicacion->servicios_competidores:old('servicios_competidores') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="servicios_competidores" name="servicios_competidores" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->servicios_competidores)?$comunicacion->servicios_competidores:old('servicios_competidores') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="atributos" class="form-label">ATRIBUTOS COMERCIALES, ¿Qué diferencia su marca, producto/s o servicio/s de la competencia? ¿Cuáles son sus atributos más destacables?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="atributos" name="atributos" placeholder="Respuesta máxima de 500 caractéres">{{ isset($comunicacion->atributos)?$comunicacion->atributos:old('atributos') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="atributos" name="atributos" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->atributos)?$comunicacion->atributos:old('atributos') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="medios" class="form-label">MEDIOS / CANALES. Especifique los medios que pretende utilizar para la comunicación de la presente campaña</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="medios" name="medios" placeholder="Respuesta máxima de 500 caractéres">{{ isset($comunicacion->medios)?$comunicacion->medios:old('medios') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="medios" name="medios" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->medios)?$comunicacion->medios:old('medios') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="entregables" class="form-label">ENTREGABLES, ¿Cuáles son las piezas o materiales para desarrollar en la presente campaña? (Artes de Prensa, Cuñas Radiales, Comunicación en RRSS, etc.)</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="entregables" name="entregables" placeholder="Respuesta máxima de 500 caractéres">{{ isset($comunicacion->entregables)?$comunicacion->entregables:old('entregables') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="entregables" name="entregables" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->entregables)?$comunicacion->entregables:old('entregables') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="plazos" class="form-label">PLAZOS, ¿Cuál será el plazo de ejecución de la presente campaña?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="plazos" name="plazos" placeholder="Respuesta máxima de 500 caractéres">{{ isset($comunicacion->plazos)?$comunicacion->plazos:old('plazos') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="plazos" name="plazos" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->plazos)?$comunicacion->plazos:old('plazos') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="voz" class="form-label">TONO DE VOZ. Resuma con 3 adjetivos el estilo que desea que tenga su comunicación</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="voz" name="voz" placeholder="Respuesta máxima de 500 caractéres">{{ isset($comunicacion->voz)?$comunicacion->voz:old('voz') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="voz" name="voz" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->voz)?$comunicacion->voz:old('voz') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="condicionantes" class="form-label">15. Describa lo más detallado posible como sería el perfil de su cliente ideal. (Nivel Socioeconómico, Profesión, Ciclo de Vida Familiar, Ingresos Mensuales, etc) (Puede especificar varios perfiles)</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="condicionantes" name="condicionantes" placeholder="Respuesta máxima de 500 caractéres">{{ isset($comunicacion->condicionantes)?$comunicacion->condicionantes:old('condicionantes') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="condicionantes" name="condicionantes" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->condicionantes)?$comunicacion->condicionantes:old('condicionantes') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="info_adicional" class="form-label">INFORMACIÓN ADICIONAL. Por favor agregue cualquier información o aclaración adicional que sea relevante para la elaboración de la propuesta.</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="info_adicional" name="info_adicional" placeholder="Respuesta máxima de 500 caractéres">{{ isset($comunicacion->info_adicional)?$comunicacion->info_adicional:old('info_adicional') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="info_adicional" name="info_adicional" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->info_adicional)?$comunicacion->info_adicional:old('info_adicional') }}</textarea>
                 </div>
                 
                 <button id="btnDesarrollo" type="submit" class="btn btn-primary">Enviar Brief</button>

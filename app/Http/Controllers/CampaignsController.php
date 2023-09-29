@@ -35,7 +35,7 @@ class CampaignsController extends Controller
      */
     public function store(Request $request)
     {
-        $campaign = new campaign;
+        $campaign = new campaigns;
         $campaign->empresa = $request->empresa;
         $campaign->categoria = $request->categoria;
         $campaign->marca = $request->marca;
@@ -61,7 +61,7 @@ class CampaignsController extends Controller
         $campaign->info_adicional = $request->info_adicional;
 
         $campaign->save();
-        return redirect('BriefCreativo')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia');
+        return redirect('BriefCreativo')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia.');
     }
 
     /**

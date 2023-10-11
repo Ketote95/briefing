@@ -121,17 +121,33 @@
             <table style="border-bottom: 1px dotted #2F277A;" class="table">
                 <thead>
                     <tr>
-                        <th>Sitio Web</th>
-                        <th>Facebook</th>
-                        <th>Instagram</th>
+                        @if (isset($data['sitio_web']))
+                            <th>Sitio Web</th>                            
+                        @endif
+
+                        @if (isset($data['facebook']))
+                            <th>Facebook</th>                            
+                        @endif
+
+                        @if (isset($data['instagram']))
+                            <th>Instagram</th>                            
+                        @endif
                     </tr>
                 </thead>
                 
                 <tbody>
                     <tr>
-                        <td>{{$data['sitio_web']}}</td>
-                        <td>{{$data['facebook']}}</td>
-                        <td>{{$data['instagram']}}</td>
+                        @if (isset($data['sitio_web']))
+                            <td>{{$data['sitio_web']}}</td>
+                        @endif
+                            
+                        @if (isset($data['facebook']))                            
+                            <td>{{$data['facebook']}}</td>
+                        @endif
+
+                        @if (isset($data['instagram']))
+                            <td>{{$data['instagram']}}</td>                        
+                        @endif
                     </tr>
                 </tbody>
             </table>            
@@ -142,15 +158,25 @@
             <table style="border-bottom: 1px dotted #2F277A;" class="table">
                 <thead>
                     <tr>
-                        <th>TikTok</th>
-                        <th>LinkedIn</th>
+                        @if (isset($data['tiktok']))
+                            <th>TikTok</th>                            
+                        @endif
+
+                        @if (isset($data['linkedin']))
+                            <th>LinkedIn</th>                            
+                        @endif
                     </tr>
                 </thead>
                 
                 <tbody>
                     <tr>
-                        <td>{{$data['tiktok']}}</td>
-                        <td>{{$data['linkedin']}}</td>
+                        @if (isset($data['tiktok']))
+                            <td>{{$data['tiktok']}}</td>                            
+                        @endif
+
+                        @if (isset($data['linkedin']))
+                            <td>{{$data['linkedin']}}</td>                            
+                        @endif
                     </tr>
                 </tbody>
             </table>            

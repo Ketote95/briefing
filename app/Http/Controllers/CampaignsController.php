@@ -61,7 +61,7 @@ class CampaignsController extends Controller
         $campaign->info_adicional = $request->info_adicional;
 
         $campaign->save();
-        return redirect('BriefCreativo')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia.');
+        return redirect('briefcreativo')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia.');
     }
 
     /**
@@ -82,7 +82,7 @@ class CampaignsController extends Controller
         ];
         $fecha = $elArray['data']['created_at'];
         $pdf = PDF::loadView('campaigns/briefPDF', $elArray);
-        return $pdf->download('BriefComunicación [' . $elArray['data']['empresa'] . '] ' . $fecha . '.pdf');
+        return $pdf->download('Brief_Creativo [' . $elArray['data']['empresa'] . '] ' . $fecha . '.pdf');
     }
 
     /**

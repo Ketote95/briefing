@@ -109,9 +109,9 @@
             
             <tbody>
                 <tr>
-                    <td style="width: 40%">{{$data['empresa']}}</td>
-                    <td style="width: 30%">{{$data['categoria']}}</td>
-                    <td style="width: 30%">{{$data['marca']}}</td>
+                    <td>{{$data['empresa']}}</td>
+                    <td>{{$data['categoria']}}</td>
+                    <td>{{$data['marca']}}</td>
                 </tr>
             </tbody>
         </table>
@@ -128,9 +128,9 @@
             
             <tbody>
                 <tr>
-                    <td style="width: 40%">{{$data['sub_marca']}}</td>
-                    <td style="width: 30%">{{$data['plazo']}} días</td>
-                    <td style="width: 30%">{{$data['duracion']}} días</td>
+                    <td>{{$data['sub_marca']}}</td>
+                    <td>{{$data['plazo']}}</td>
+                    <td>{{$data['duracion']}}</td>
                 </tr>
             </tbody>
         </table>
@@ -145,7 +145,7 @@
             
             <tbody>
                 <tr>
-                    <td>$us. {{$data['presupuesto']}}</td>
+                    <td>{{$data['presupuesto']}}</td>
                 </tr>
             </tbody>
         </table>

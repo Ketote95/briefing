@@ -45,7 +45,7 @@
                     {{Session::get('mensaje')}}
                     <p>Una vez cerrada esta ventana, no es posible volver a generar el enlace.</p>
                     <hr>
-                    <a style="text-align: center" starget="_blank" href="{{ url("/Comunicación/pdf/") }}" class="alert-link">Descargar PDF</a>
+                    <a style="text-align: center" starget="_blank" href="{{ url("/creativo/pdf/") }}" class="alert-link">Descargar PDF</a>
                 </div>
             @endif
 
@@ -60,7 +60,7 @@
                 </div>
             @endif
 
-            <form action="{{url('BriefCreativo')}}" method="POST" class="p-5">
+            <form action="{{url('briefcreativo')}}" method="POST" class="p-5">
                 {{-- Campos de empresa, categoría y marca --}}
                 @csrf
                 <div class="row">
@@ -89,12 +89,12 @@
     
                     <div class="col-lg-4 mb-2">
                         <label for="plazo" class="form-label">Plazo <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="plazo" name="plazo" value="{{ isset($comunicacion->plazo)?$comunicacion->plazo:old('plazo') }}" placeholder="Plazo para planificación" required>
+                        <input type="number" class="form-control" id="plazo" name="plazo" value="{{ isset($comunicacion->plazo)?$comunicacion->plazo:old('plazo') }}" placeholder="Plazo en días" required>
                     </div>
     
                     <div class="col-lg-4 mb-2">
                         <label for="duracion" class="form-label">Duración de la campaña<span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="duracion" name="duracion" value="{{ isset($comunicacion->duracion)?$comunicacion->duracion:old('duracion') }}" placeholder="Tiempo en días" required>
+                        <input type="number" class="form-control" id="duracion" name="duracion" value="{{ isset($comunicacion->duracion)?$comunicacion->duracion:old('duracion') }}" placeholder="Tiempo en días" required>
                     </div>
                 </div>           
                 
@@ -102,7 +102,7 @@
                 <div class="row">
                     <div class="col-lg-6 mb-2">
                         <label for="presupuesto" class="form-label">Presupuesto<span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="presupuesto" name="presupuesto" value="{{ isset($comunicacion->presupuesto)?$comunicacion->presupuesto:old('presupuesto') }}" placeholder="Presupuesto en bolivianos" required>
+                        <input type="number" class="form-control" id="presupuesto" name="presupuesto" value="{{ isset($comunicacion->presupuesto)?$comunicacion->presupuesto:old('presupuesto') }}" placeholder="Presupuesto en dólares" required>
                     </div>
                 </div>
 
@@ -212,6 +212,13 @@
             });
 
             $(document).on('keyup keypress', 'form input[type="email"]', function(e) {
+                if(e.keyCode == 13) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            $(document).on('keyup keypress', 'form input[type="number"]', function(e) {
                 if(e.keyCode == 13) {
                     e.preventDefault();
                     return false;

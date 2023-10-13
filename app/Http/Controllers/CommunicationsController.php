@@ -97,14 +97,13 @@ class CommunicationsController extends Controller
     public function generatePDF() {
         
         $array = DB::table('communications')->latest('created_at')->first();
-        // $data = communications::findOrFail($id);
         $arreglo = json_decode(json_encode($array), true);
         $elArray = [
             'data' => $arreglo
         ];
         $fecha = $elArray['data']['created_at'];
         $pdf = PDF::loadView('communications/briefPDF', $elArray);
-        return $pdf->download('briefcomunicacion [' . $elArray['data']['empresa'] . '] ' . $fecha . '.pdf');
+        return $pdf->download('Brief_Comunicación [' . $elArray['data']['empresa'] . '] ' . $fecha . '.pdf');
     }
 
     /**

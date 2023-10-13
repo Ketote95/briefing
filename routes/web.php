@@ -25,10 +25,18 @@ Route::post('/briefcomunicacion', [App\Http\Controllers\CommunicationsController
 //Generador de Brief comunicación en PDF
 Route::get('/comunicacion/pdf', [App\Http\Controllers\CommunicationsController::class, 'generatePDF'])->name('pdf_comunicación');
 
-// Rutas para los briefs de comunicación
-Route::get('/BriefCreativo', [App\Http\Controllers\CampaignsController::class, 'index'])->name('creativo');
-Route::get('/BriefCreativo/{id}', [App\Http\Controllers\CampaignsController::class, 'show']);
-Route::post('/BriefCreativo', [App\Http\Controllers\CampaignsController::class, 'store']);
+// Rutas para los briefs creativos y de campañas
+Route::get('/briefcreativo', [App\Http\Controllers\CampaignsController::class, 'index'])->name('creativo');
+Route::get('/briefcreativo/{id}', [App\Http\Controllers\CampaignsController::class, 'show']);
+Route::post('/briefcreativo', [App\Http\Controllers\CampaignsController::class, 'store']);
 
-//Generador de Brief comunicación en PDF
-Route::get('/Creativo/pdf', [App\Http\Controllers\CampaignsController::class, 'generatePDF'])->name('pdf_comunicación');
+//Generador de Brief creativo en PDF
+Route::get('/creativo/pdf', [App\Http\Controllers\CampaignsController::class, 'generatePDF'])->name('pdf_creativo');
+
+// Rutas para los briefs de desarrollo web
+Route::get('/briefdesarrollo', [App\Http\Controllers\DevelopmentController::class, 'index'])->name('desarrollo');
+Route::get('/briefdesarrollo/{id}', [App\Http\Controllers\DevelopmentController::class, 'show']);
+Route::post('/briefdesarrollo', [App\Http\Controllers\DevelopmentController::class, 'store']);
+
+//Generador de Brief desarrollo web en PDF
+Route::get('/desarrollo/pdf', [App\Http\Controllers\DevelopmentController::class, 'generatePDF'])->name('pdf_desarrollo');

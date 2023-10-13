@@ -126,7 +126,7 @@
 
                 <div class="mb-3">
                     <label for="publico" class="form-label">PÚBLICO OBJETIVO, ¿A qué segmento/s desea dirigirse? Se debe determinar variables Geográficas, Demográficas, Comportamientos, Nivel Socio económico, etc. (Sea lo más preciso posible.). En caso de ser varios públicos, favor ordenarlos por relevancia</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="publico" name="publico" placeholder="Escriba 5 palabras">{{ isset($comunicacion->publico)?$comunicacion->publico:old('publico') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="publico" name="publico" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->publico)?$comunicacion->publico:old('publico') }}</textarea>
                 </div>
 
                 <div class="mb-3">
@@ -176,11 +176,11 @@
 
                 <div class="mb-3">
                     <label for="voz" class="form-label">TONO DE VOZ. Resuma con 3 adjetivos el estilo que desea que tenga su comunicación</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="voz" name="voz" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->voz)?$comunicacion->voz:old('voz') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="voz" name="voz" placeholder="Escriba 3 adjetivos">{{ isset($comunicacion->voz)?$comunicacion->voz:old('voz') }}</textarea>
                 </div>
 
                 <div class="mb-3">
-                    <label for="condicionantes" class="form-label">15. Describa lo más detallado posible como sería el perfil de su cliente ideal. (Nivel Socioeconómico, Profesión, Ciclo de Vida Familiar, Ingresos Mensuales, etc) (Puede especificar varios perfiles)</label>
+                    <label for="condicionantes" class="form-label">Describa lo más detallado posible como sería el perfil de su cliente ideal. (Nivel Socioeconómico, Profesión, Ciclo de Vida Familiar, Ingresos Mensuales, etc) (Puede especificar varios perfiles)</label>
                     <textarea maxlength="500" rows="6" class="form-control" id="condicionantes" name="condicionantes" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->condicionantes)?$comunicacion->condicionantes:old('condicionantes') }}</textarea>
                 </div>
 

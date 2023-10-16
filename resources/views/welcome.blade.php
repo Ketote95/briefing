@@ -31,6 +31,7 @@
                 <a href="{{ url('briefcreativo') }}" id="btnDiseño" class="btn btn-primary mt-2">Creativo y de campañas</a>
                 <a href="{{ url('briefdesarrollo') }}" id="btnDesarrollo" class="btn btn-primary mt-2">Desarrollo Web</a>
                 <a href="#" id="btnProduccion" class="btn btn-primary mt-2">Creación de marca</a>
+                <a href="#" id="btnProduccion" class="btn btn-primary mt-2">Creación de nombre</a>
             </div>   
         </div>
 

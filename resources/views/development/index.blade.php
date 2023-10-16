@@ -61,119 +61,326 @@
             @endif
 
             <form action="{{url('briefcomunicacion')}}" method="POST" class="p-5">
-                {{-- Campos de empresa, categoría y marca --}}
+                {{-- Campos de nombre, tamaño y presencia --}}
                 @csrf
                 <div class="row">
-                    <div class="col-lg-4 mb-2">
-                        <label for="empresa" class="form-label">Empresa <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="empresa" name="empresa" value="{{ isset($comunicacion->empresa)?$comunicacion->empresa:old('empresa') }}" placeholder="Nombre de la empresa" required>
+                    <div class="col-lg-4 mb-4">
+                        <label for="nombre" class="form-label">Nombre <span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" value="{{ isset($campaign->nombre)?$campaign->nombre:old('nombre') }}" placeholder="Nombre de la empresa" required>
                     </div>
     
-                    <div class="col-lg-4 mb-2">
-                        <label for="categoria" class="form-label">Categoría <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="categoria" name="categoria" value="{{ isset($comunicacion->categoria)?$comunicacion->categoria:old('categoria') }}" placeholder="Sector económico" required>
+                    <div class="col-lg-4 mb-4">
+                        <label for="tamaño" class="form-label">Tamaño de la empresa <span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="tamaño" name="tamaño" value="{{ isset($campaign->tamaño)?$campaign->tamaño:old('tamaño') }}" placeholder="Más de 50 empleados" required>
                     </div>
     
-                    <div class="col-lg-4 mb-2">
-                        <label for="marca" class="form-label">Marca <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="marca" name="marca" value="{{ isset($comunicacion->marca)?$comunicacion->marca:old('marca') }}" placeholder="Nombre de la marca" required>
+                    <div class="col-lg-4 mb-4">
+                        <label for="presencia" class="form-label">Ciudades o países en los que tiene presencia <span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="presencia" name="presencia" value="{{ isset($campaign->presencia)?$campaign->presencia:old('presencia') }}" placeholder="Toda latinoamérica" required>
                     </div>
                 </div>
 
-                {{-- Campos de sitio web, facebook e instagram --}}
                 <div class="row">
-                    <div class="col-lg-4 mb-2">
-                        <label for="sitio web" class="form-label">Sitio Web</label>
-                        <input type="text" class="form-control" id="sitio web" name="sitio_web" value="{{ isset($comunicacion->sitio_web)?$comunicacion->sitio_web:old('sitio_web') }}" placeholder="URL de su sitio web">
+                    <div class="col-lg-6 mb-4">
+                        <label for="inicio_desarrollo" class="form-label">Fecha tentativa de inicio del desarrollo del sitio web <span style="color: red;">*</span></label>
+                        <select name="inicio_desarrollo" id="inicio_desarrollo" class="form-select">
+                            <option value="En las próximas 3 semanas">En las próximas 3 semanas</option>
+                            <option value="En las próximas 6 semanas">En las próximas 6 semanas</option>
+                            <option value="Aún no hay fecha de inicio">Aún no hay fecha de inicio</option>
+                        </select>
                     </div>
     
-                    <div class="col-lg-4 mb-2">
-                        <label for="facebook" class="form-label">Facebook</label>
-                        <input type="text" class="form-control" id="facebook" name="facebook" value="{{ isset($comunicacion->facebook)?$comunicacion->facebook:old('facebook') }}" placeholder="Enlace de su perfil de Facebook">
+                    <div class="col-lg-6 mb-4">
+                        <label for="tipo_desarrollo" class="form-label">Tipo de desarrollo <span style="color: red;">*</span></label>
+                        <select name="tipo_desarrollo" id="tipo_desarrollo" class="form-select">
+                            <option value="Creación de sitio web corporativo">Creación de sitio web corporativo</option>
+                            <option value="Creación de landing page">Creación de landing page</option>
+                            <option value="Creación de sistema intranet/extranet">Creación de sistema intranet/extranet</option>
+                            <option value="Crear una tienda online eCommerce">Crear una tienda online eCommerce</option>
+                        </select>
                     </div>
-    
-                    <div class="col-lg-4 mb-2">
-                        <label for="instagram" class="form-label">Instagram</label>
-                        <input type="text" class="form-control" id="instagram" name="instagram" value="{{ isset($comunicacion->instagram)?$comunicacion->instagram:old('instagram') }}" placeholder="Enlace de su perfil de Instagram">
-                    </div>
-                </div>           
+                </div>
+                {{-- Fin de respuestas cortas --}}
                 
-                {{-- Campos de tiktok y linkedin --}}
-                <div class="row">
-                    <div class="col-lg-6 mb-2">
-                        <label for="tiktok" class="form-label">TikTok</label>
-                        <input type="text" class="form-control" id="tiktok" name="tiktok" value="{{ isset($comunicacion->tiktok)?$comunicacion->tiktok:old('tiktok') }}" placeholder="Enlace de su perfil de TikTok">
-                    </div>
-    
-                    <div class="col-lg-6 mb-2">
-                        <label for="linkedin" class="form-label">LinkedIn</label>
-                        <input type="text" class="form-control" id="linkedin" name="linkedin" value="{{ isset($comunicacion->linkedin)?$comunicacion->linkedin:old('linkedin') }}" placeholder="Enlace de su perfil de LinkedIn">
-                    </div>
-                </div>
-                {{-- Fin de campos de texto cortos --}}
-
-                <div class="row mb-3">
-                    <label for="contacto" class="form-label">Contacto <span style="color: red;">*</span></label>
-                    <div class="col-lg-4 mb-2">
-                        <input type="text" class="form-control" id="nombre_completo" name="nombre_completo" value="{{ isset($comunicacion->nombre)?$comunicacion->nombre:old('nombre') }}" placeholder="Nombre completo" required>
-                    </div>
-    
-                    <div class="col-lg-4 mb-2">
-                        <input type="email" class="form-control" id="correo" name="correo" value="{{ isset($comunicacion->correo)?$comunicacion->correo:old('correo') }}" placeholder="correo@dominio.com" required>
-                    </div>
-    
-                    <div class="col-lg-4 mb-2">
-                        <input type="text" class="form-control" id="telefono" name="telefono" value="{{ isset($comunicacion->telefono)?$comunicacion->telefono:old('telefono') }}" placeholder="Número de teléfono" required>
-                    </div>
-                </div>
-
                 <div class="linea"></div>
 
-                {{-- Sección de preguntas con Textarea --}}
-                <div class="mb-3">
-                    <label for="descripcion_empresa" class="form-label">1.	Describa detalladamente su empresa</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="descripcion_empresa" name="descripcion_empresa" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->descripcion_empresa)?$comunicacion->descripcion_empresa:old('descripcion_empresa') }}</textarea>
+                {{-- Sección de preguntas con respuestas largas --}}
+                <div class="row">
+                    <label for="año_diseño" class="form-label">¿En qué año se diseñó su sitio web actual?</label>
+                    <div class="col-lg-2 mb-3">
+                        <input type="number" class="form-control" id="año_diseño" name="año_diseño" placeholder="2020">{{ isset($campaign->año_diseño)?$campaign->año_diseño:old('año_diseño') }}
+                    </div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="valores_marca" class="form-label">2. ¿Qué valores definen su marca?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="valores_marca" name="valores_marca" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->valores_marca)?$comunicacion->valores_marca:old('valores_marca') }}</textarea>
+                    <label for="aspectos_positivos" class="form-label">¿Cuáles son los aspectos positivos de su sitio web actual?</label>
+                    <textarea maxlength="500" rows="6" class="form-control" id="aspectos_positivos" name="aspectos_positivos" placeholder="Respuesta máxima de 500 caracteres">{{ isset($campaign->aspectos_positivos)?$campaign->aspectos_positivos:old('aspectos_positivos') }}</textarea>
                 </div>
 
                 <div class="mb-3">
-                    <label for="situacion_empresa" class="form-label">3. ¿Cuál es la situación actual de su empresa y marca?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="situacion_empresa" name="situacion_empresa" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->situacion_empresa)?$comunicacion->situacion_empresa:old('situacion_empresa') }}</textarea>
+                    <label for="aspectos_negativos" class="form-label">¿Cuáles son los aspectos negativos de su sitio web actual?</label>
+                    <textarea maxlength="500" rows="6" class="form-control" id="aspectos_negativos" name="aspectos_negativos" placeholder="Respuesta máxima de 500 caracteres">{{ isset($campaign->aspectos_negativos)?$campaign->aspectos_negativos:old('aspectos_negativos') }}</textarea>
                 </div>
 
                 <div class="mb-3">
-                    <label for="objetivos_marketing" class="form-label">4. OBJETIVOS DE MARKETING Escriba 5 palabras que definan cómo le gustaría que su empresa sea reconocida en el mercado</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="objetivos_marketing" name="objetivos_marketing" placeholder="Escriba 5 palabras">{{ isset($comunicacion->objetivos_marketing)?$comunicacion->objetivos_marketing:old('objetivos_marketing') }}</textarea>
+                    <label for="manual_identidad" class="form-label">¿Cuenta con un manual de identidad corporativa?</label>
+                    <textarea maxlength="500" rows="6" class="form-control" id="manual_identidad" name="manual_identidad" placeholder="Respuesta máxima de 500 caracteres">{{ isset($campaign->manual_identidad)?$campaign->manual_identidad:old('manual_identidad') }}</textarea>
                 </div>
 
                 <div class="mb-3">
-                    <label for="objetivos_comerciales" class="form-label">5. OBJETIVOS COMERCIALES ¿Qué quiere lograr en términos de ventas, penetración y posicionamiento?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="objetivos_comerciales" name="objetivos_comerciales" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->objetivos_comerciales)?$comunicacion->objetivos_comerciales:old('objetivos_comerciales') }}</textarea>
+                    <label for="competidores" class="form-label">¿Quiénes son sus competidores?</label>
+                    <textarea maxlength="500" rows="6" class="form-control" id="competidores" name="competidores" placeholder="competidor #1, competidor #2, competidor #3...">{{ isset($campaign->competidores)?$campaign->competidores:old('competidores') }}</textarea>
                 </div>
 
                 <div class="mb-3">
-                    <label for="barreras_comerciales" class="form-label">6.	¿Cuáles son sus mayores barreras comerciales?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="barreras_comerciales" name="barreras_comerciales" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->barreras_comerciales)?$comunicacion->barreras_comerciales:old('barreras_comerciales') }}</textarea>
+                    <label for="sitios_inspiracion" class="form-label">Sitios web que consideren como inspiración para el diseño web (Sean o no del sector)</label>
+                    <textarea maxlength="500" rows="6" class="form-control" id="sitios_inspiracion" name="sitios_inspiracion" placeholder="www.ejemplo-1.com, www.ejemplo-2.com, www.ejemplo-3.com">{{ isset($campaign->sitios_inspiracion)?$campaign->sitios_inspiracion:old('sitios_inspiracion') }}</textarea>
                 </div>
 
                 <div class="mb-3">
-                    <label for="barreras_marketing" class="form-label">7. ¿Cuáles son sus mayores barreras de marketing y comunicación?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="barreras_marketing" name="barreras_marketing" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->barreras_marketing)?$comunicacion->barreras_marketing:old('barreras_marketing') }}</textarea>
+                    <label for="estilo_sitio_web" class="form-label">Estilo que desea para la nueva imagen de su sitio web</label>
+                    <select name="estilo_sitio_web" id="estilo_sitio_web" class="form-select">
+                        <option value="Estilo natural">Estilo natural: colores claros, simple y sencilla</option>
+                        <option value="Estilo tradicional">Estilo tradicional: colores tradicionales, cuadrada y muy exacta</option>
+                        <option value="Estilo elegante">Estilo elegante: colores obscuros, bien proporcionada y poco texto</option>
+                        <option value="Estilo romántico">Estilo romántico: colores pastel, un poco más libre en estructura</option>
+                        <option value="Estilo seductor">Estilo seductor: colores cálidos</option>
+                        <option value="Estilo creativo">Estilo creativo: colores adicionales a la paleta de color, con estructuras libres y diferentes</option>
+                        <option value="Estilo dramático">Estilo dramático: colores fuertes y llamativos, sin temor al ridículo, simplemente impactar</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <label for="fotos" class="form-label">¿Poseen fotografías propias para incluir en su sitio web?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="fotos" id="fotos" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="plan_fotos" class="form-label">¿Desean adquirir fotografías de stock?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="plan_fotos" id="plan_fotos" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="sesion_fotos" class="form-label">¿Existe el plan de desarrollar una sesión fotográfica / shooting?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="sesion_fotos" id="sesion_fotos" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="imagenes_referenciales" class="form-label">¿Poseen imágenes referenciales para representar sus productos o servicios?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="imagenes_referenciales" id="imagenes_referenciales" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="videos" class="form-label">¿Poseen vídeos propios para incluir en su sitio web?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="videos" id="videos" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <label for="videos_stock" class="form-label">¿Desean adquirir vídeos de stock?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="videos_stock" id="videos_stock" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="plan_videos" class="form-label">¿Existe el plan de desarrollar una producción audiovisual de su empresa?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="plan_videos" id="plan_videos" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="comunicar_servicios" class="form-label">8.	¿Cómo comunica actualmente sus productos o servicios?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="comunicar_servicios" name="comunicar_servicios" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->comunicar_servicios)?$comunicacion->comunicar_servicios:old('comunicar_servicios') }}</textarea>
+                    <label for="cambios_logo" class="form-label">¿El logo sufrirá cambios durante el desarrollo del sitio web?</label>
+                    <textarea maxlength="500" rows="6" class="form-control" id="cambios_logo" name="cambios_logo" placeholder="Respuesta máxima de 500 caracteres">{{ isset($campaign->cambios_logo)?$campaign->cambios_logo:old('cambios_logo') }}</textarea>
+                </div>
+
+                <div class="row">
+                    <label for="archivo_logo" class="form-label">¿Poseen el logo en alta calidad o poseen el archivo editable?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="archivo_logo" id="archivo_logo" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="comercializar_servicios" class="form-label">9.	¿Cómo comercializa actualmente sus productos o servicios?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="comercializar_servicios" name="comercializar_servicios" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->comercializar_servicios)?$comunicacion->comercializar_servicios:old('comercializar_servicios') }}</textarea>
-                </div>               
+                    <label for="tipografia" class="form-label">¿Poseen una o varias tipografías específicas asociadas al logotipo o imagen corporativa?</label>
+                    <textarea maxlength="500" rows="6" class="form-control" id="tipografia" name="tipografia" placeholder="Respuesta máxima de 500 caracteres">{{ isset($campaign->tipografia)?$campaign->tipografia:old('tipografia') }}</textarea>
+                </div>
+
+                <div class="row">
+                    <label for="archivos_tipografia" class="form-label">¿Poseen la fuente o archivos de las tipografías?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="archivos_tipografia" id="archivos_tipografia" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="paleta_colores" class="form-label">¿Cuentan con la paleta exacta de colores corporativos?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="paleta_colores" id="paleta_colores" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="cambios_colores" class="form-label">¿Habrá cambios en los colores corporativos durante el desarrollo del sitio web?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="cambios_colores" id="cambios_colores" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="contenido_web" class="form-label">¿Cuenta con el contenido que irá en el sitio web ya redactado en formato de texto (Word)?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="contenido_web" id="contenido_web" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="agencia_contenido" class="form-label">¿Requiere que la agencia desarrolle contenido?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="agencia_contenido" id="agencia_contenido" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="herramientas_web" class="form-label">¿Desea que su sitio web tenga alguna funcionalidad o herramienta en particular?</label>
+                    <textarea maxlength="500" rows="6" class="form-control" id="herramientas_web" name="herramientas_web" placeholder="Asistente en línea, chatbot, botón de redireccionamiento WhatsApp...">{{ isset($campaign->herramientas_web)?$campaign->herramientas_web:old('herramientas_web') }}</textarea>
+                </div>
+
+                <div class="row">
+                    <label for="sistemas_terceros" class="form-label">¿Tiene aplicaciones o sistemas de terceros que desee implementar?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="sistemas_terceros" id="sistemas_terceros" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="info_sistemas" class="form-label">En caso que la respuesta anterior sea afirmativa, requerimos que pueda brindarnos información acerca del nombre de la o las herramientas que desea integrar y una breve descripción de las mismas</label>
+                    <textarea maxlength="500" rows="6" class="form-control" id="info_sistemas" name="info_sistemas" placeholder="Respuesta máxima de 500 caracteres">{{ isset($campaign->info_sistemas)?$campaign->info_sistemas:old('info_sistemas') }}</textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="redes_sociales" class="form-label">Links de Redes Sociales y otras plataformas (Un enlace por línea)</label>
+                    <textarea maxlength="500" rows="6" class="form-control" id="redes_sociales" name="redes_sociales" placeholder="Facebook: https://facebook.com/mipágina">{{ isset($campaign->redes_sociales)?$campaign->redes_sociales:old('redes_sociales') }}</textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="estructura_web" class="form-label">¿Cuál es la estructura, categorías y subcategorías deseadas para su sitio web?</label>
+                    <textarea maxlength="500" rows="6" class="form-control" id="estructura_web" name="estructura_web" placeholder="Ejemplo: Inicio, Quienes Somos, Productos, Contacto...">{{ isset($campaign->estructura_web)?$campaign->estructura_web:old('estructura_web') }}</textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="campos_formulario" class="form-label">Formularios: En caso de incluirse un formulario en el sitio web. ¿Qué campos requiere que tenga?</label>
+                    <textarea maxlength="500" rows="6" class="form-control" id="campos_formulario" name="campos_formulario" placeholder="Ejemplo: Nombre, correo electrónico, celular...">{{ isset($campaign->campos_formulario)?$campaign->campos_formulario:old('campos_formulario') }}</textarea>
+                </div>
+
+                <div class="row">
+                    <label for="correo_formularios" class="form-label">¿A qué dirección de correo electrónico desea que lleguen estos formularios?</label>
+                    <div class="col-lg-3 mb-3">
+                        <input type="email" class="form-control" id="correo_formularios" name="correo_formularios" placeholder="correo@dominio.com">{{ isset($campaign->correo_formularios)?$campaign->correo_formularios:old('correo_formularios') }}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="dominio-web" class="form-label">¿Cuenta con un dominio.com para su sitio web?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="dominio_web" id="dominio_web" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="compra_dominio" class="form-label">En caso que la respuesta anterior sea negativa, ¿Desea que realicemos la compra de algún dominio? En caso de ser así, por favor especifiquemos el nombre para el dominio</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="compra_dominio" id="compra_dominio" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="credenciales_dominio" class="form-label">Si la respuesta es positiva, ¿Cuáles serían las credenciales de acceso a su dominio?</label>
+                    <textarea maxlength="100" rows="2" class="form-control" id="credenciales_dominio" name="credenciales_dominio" placeholder="Usuario: admin / Contraseña: admin">{{ isset($campaign->credenciales_dominio)?$campaign->credenciales_dominio:old('credenciales_dominio') }}</textarea>
+                </div>
+
+                <div class="row">
+                    <label for="hosting" class="form-label">¿Cuenta ya con un servicio de web hosting contratado para  su sitio web?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="hosting" id="hosting" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="compra_hosting" class="form-label">En caso que la respuesta anterior sea negativa, ¿Desea que realicemos la suscripción de algún servicio de web hosting?</label>
+                    <div class="col-lg-2 mb-3">
+                        <select name="compra_hosting" id="compra_hosting" class="form-select">
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="credenciales_hosting" class="form-label">Si la respuesta es positiva, ¿Cuáles serían las credenciales de acceso a su servidor?</label>
+                    <textarea maxlength="100" rows="2" class="form-control" id="credenciales_hosting" name="credenciales_hosting" placeholder="Usuario: admin / Contraseña: admin">{{ isset($campaign->credenciales_hosting)?$campaign->credenciales_hosting:old('credenciales_hosting') }}</textarea>
+                </div>
 
                 <button id="btnDesarrollo" type="submit" class="btn btn-primary">Enviar Brief</button>
             </form>

@@ -360,7 +360,7 @@
                         <td><li><span>¿Qué le gustaría que contenga su logo de forma mandatoria?</span></li></td>
                     </tr>
                     <tr>
-                        <td>{{$data['años_logo']}}</td>
+                        <td>{{$data['gustos_logo']}}</td>
                     </tr>                    
                 @endisset
 
@@ -441,7 +441,7 @@
                         <td><li><span>¿Cuál es el nivel de ingresos promedio de su público objetivo?</span></li></td>
                     </tr>
                     <tr>
-                        <td>{{$data['ingresos_promedio_publico']}}</td>
+                        <td>USD {{$data['ingresos_promedio_publico']}}</td>
                     </tr>                    
                 @endisset
             </tbody>

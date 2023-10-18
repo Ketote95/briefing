@@ -101,9 +101,17 @@
                     <textarea maxlength="500" rows="6" class="form-control" id="eleccion_empresa" name="eleccion_empresa" placeholder="Respuesta máxima de 500 caracteres">{{ isset($marca->eleccion_empresa)?$marca->eleccion_empresa:old('eleccion_empresa') }}</textarea>
                 </div>
 
-                <div class="mb-3">
+                <div class="row">
                     <label for="años" class="form-label">¿Cuántos años tiene la empresa en el mercado?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="años" name="años" placeholder="Respuesta máxima de 500 caracteres">{{ isset($marca->años)?$marca->años:old('años') }}</textarea>
+                    <div class="col-lg-3 mb-3">
+                        <select name="años" id="años" class="form-select">
+                            <option value="Menos de 1 año">Menos de 1 año</option>
+                            <option value="1-3 años">1-3 años</option>
+                            <option value="3-5 años">3-5 años</option>
+                            <option value="5-10 años">5-10 años</option>
+                            <option value="Más de 10 años">Más de 10 años</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="mb-3">
@@ -166,9 +174,17 @@
                     <textarea maxlength="500" rows="6" class="form-control" id="rediseño_logo" name="rediseño_logo" placeholder="Respuesta máxima de 500 caracteres">{{ isset($marca->rediseño_logo)?$marca->rediseño_logo:old('rediseño_logo') }}</textarea>
                 </div>
 
-                <div class="mb-3">
+                <div class="row">
                     <label for="años_logo" class="form-label">¿Cuántos años tiene su logo actual?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="años_logo" name="años_logo" placeholder="Respuesta máxima de 500 caracteres">{{ isset($marca->años_logo)?$marca->años_logo:old('años_logo') }}</textarea>
+                    <div class="col-lg-3 mb-3">
+                        <select name="años_logo" id="años_logo" class="form-select">
+                            <option value="Menos de 1 año">Menos de 1 año</option>
+                            <option value="1-3 años">1-3 años</option>
+                            <option value="3-5 años">3-5 años</option>
+                            <option value="5-10 años">5-10 años</option>
+                            <option value="Más de 10 años">Más de 10 años</option>
+                        </select>
+                    </div>
                 </div>
                 
                 <div class="mb-3">
@@ -267,9 +283,9 @@
                 </div>
                 
                 <div class="row">
-                    <label for="ingresos_promedio_" class="form-label">¿Cuál es el nivel de ingresos promedio de su público objetivo?</label>
+                    <label for="ingresos_promedio_publico" class="form-label">¿Cuál es el nivel de ingresos promedio de su público objetivo?</label>
                     <div class="col-md-3 mb-5">
-                        <input type="number" class="form-control" id="ingresos_promedio_" name="ingresos_promedio_" placeholder="Valor entero en USD">{{ isset($marca->ingresos_promedio_)?$marca->ingresos_promedio_:old('ingresos_promedio_') }}
+                        <input type="number" class="form-control" id="ingresos_promedio_publico" name="ingresos_promedio_publico" placeholder="Valor entero en USD">{{ isset($marca->ingresos_promedio_publico)?$marca->ingresos_promedio_publico:old('ingresos_promedio_publico') }}
                     </div>
                 </div>
 

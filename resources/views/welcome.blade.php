@@ -29,9 +29,9 @@
             <div class="d-grid gap-2 col-6 mx-auto">
                 <a href="{{ url('briefcomunicacion') }}" id="btnComunicacion" class="btn btn-primary mt-5">Comunicación</a>
                 <a href="{{ url('briefcreativo') }}" id="btnDiseño" class="btn btn-primary mt-2">Creativo y de campañas</a>
-                <a href="{{ url('briefdesarrollo') }}" id="btnDesarrollo" class="btn btn-primary mt-2">Desarrollo Web</a>
-                <a href="#" id="btnProduccion" class="btn btn-primary mt-2">Creación de marca</a>
-                <a href="#" id="btnProduccion" class="btn btn-primary mt-2">Creación de nombre</a>
+                <a href="{{ url('briefdesarrollo') }}" id="btnDesarrollo" class="btn btn-primary mt-2">Desarrollo web</a>
+                <a href="{{ url('briefbranding') }}" id="btnBranding" class="btn btn-primary mt-2">Creación de marca</a>
+                <a href="{{ url('briefnaming') }}" id="btnNaming" class="btn btn-primary mt-2">Creación de nombre</a>
             </div>   
         </div>
 

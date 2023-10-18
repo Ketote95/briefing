@@ -40,3 +40,19 @@ Route::post('/briefdesarrollo', [App\Http\Controllers\DevelopmentController::cla
 
 //Generador de Brief desarrollo web en PDF
 Route::get('/desarrollo/pdf', [App\Http\Controllers\DevelopmentController::class, 'generatePDF'])->name('pdf_desarrollo');
+
+// Rutas para los briefs de creación de marca
+Route::get('/briefbranding', [App\Http\Controllers\BrandingController::class, 'index'])->name('branding');
+Route::get('/briefbranding/{id}', [App\Http\Controllers\BrandingController::class, 'show']);
+Route::post('/briefbranding', [App\Http\Controllers\BrandingController::class, 'store']);
+
+//Generador de Brief creación de marca en PDF
+Route::get('/branding/pdf', [App\Http\Controllers\BrandingController::class, 'generatePDF'])->name('pdf_branding');
+
+// Rutas para los briefs de creación de nombre
+Route::get('/briefnaming', [App\Http\Controllers\NamingController::class, 'index'])->name('naming');
+Route::get('/briefnaming/{id}', [App\Http\Controllers\NamingController::class, 'show']);
+Route::post('/briefnaming', [App\Http\Controllers\NamingController::class, 'store']);
+
+//Generador de Brief creación de nombre en PDF
+Route::get('/naming/pdf', [App\Http\Controllers\NamingController::class, 'generatePDF'])->name('pdf_naming');

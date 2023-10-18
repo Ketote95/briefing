@@ -4,7 +4,7 @@
         <meta chartset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Brief - Dosis ({{$data['nombre_empresa']}}) {{$data['created_at']}}</title>
+        <title>Brief - Dosis ({{$data['empresa']}}) {{$data['created_at']}}</title>
 
         {{-- CSS Bootstrap 5 --}}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -109,7 +109,7 @@
             
             <tbody>
                 <tr>
-                    <td>{{$data['nombre_empresa']}}</td>
+                    <td>{{$data['empresa']}}</td>
                     <td>{{$data['naming']}}</td>
                     <td>{{$data['categoria']}}</td>
                 </tr>

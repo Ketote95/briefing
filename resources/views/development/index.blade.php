@@ -45,7 +45,7 @@
                     {{Session::get('mensaje')}}
                     <br><p>Una vez cerrada esta ventana, no es posible volver a generar el enlace.</p>
                     <hr>
-                    <a style="text-align: center" target="_blank" href="{{ url("/comunicacion/pdf/") }}" class="alert-link">Descargar PDF</a>
+                    <a style="text-align: center" target="_blank" href="{{ url("/desarrollo/pdf/") }}" class="alert-link">Descargar PDF</a>
                 </div>
             @endif
 
@@ -60,13 +60,13 @@
                 </div>
             @endif
 
-            <form action="{{url('briefcomunicacion')}}" method="POST" class="p-5">
+            <form action="{{url('briefdesarrollo')}}" method="POST" class="p-5">
                 {{-- Campos de nombre, tamaño y presencia --}}
                 @csrf
                 <div class="row">
                     <div class="col-lg-4 mb-4">
-                        <label for="nombre" class="form-label">Nombre <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" value="{{ isset($campaign->nombre)?$campaign->nombre:old('nombre') }}" placeholder="Nombre de la empresa" required>
+                        <label for="empresa" class="form-label">Nombre <span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="empresa" name="empresa" value="{{ isset($campaign->empresa)?$campaign->empresa:old('empresa') }}" placeholder="Nombre de la empresa" required>
                     </div>
     
                     <div class="col-lg-4 mb-4">

@@ -65,8 +65,8 @@
                 @csrf
                 <div class="row">
                     <div class="col-lg-4 mb-4">
-                        <label for="nombre_empresa" class="form-label">¿Cómo se llama la empresa / organización? <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="nombre_empresa" name="nombre_empresa" value="{{ isset($marca->nombre_empresa)?$marca->nombre_empresa:old('nombre_empresa') }}" placeholder="Nombre de la empresa" required>
+                        <label for="empresa" class="form-label">¿Cómo se llama la empresa / organización? <span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="empresa" name="empresa" value="{{ isset($marca->empresa)?$marca->empresa:old('empresa') }}" placeholder="Nombre de la empresa" required>
                     </div>
     
                     <div class="col-lg-4 mb-4">

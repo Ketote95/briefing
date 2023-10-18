@@ -37,7 +37,7 @@ class BrandingController extends Controller
     public function store(Request $request)
     {
         $marca = new branding;
-        $marca->nombre_empresa = $request->nombre_empresa;
+        $marca->empresa = $request->empresa;
         $marca->naming = $request->naming;
         $marca->categoria = $request->categoria;
         $marca->diferencia = $request->diferencia;
@@ -99,7 +99,7 @@ class BrandingController extends Controller
         ];
         $fecha = $elArray['data']['created_at'];
         $pdf = PDF::loadView('branding/briefPDF', $elArray);
-        return $pdf->download('Brief_Creación_Marca [' . $elArray['data']['nombre_empresa'] . '] ' . $fecha . '.pdf');
+        return $pdf->download('Brief_Creación_Marca [' . $elArray['data']['empresa'] . '] ' . $fecha . '.pdf');
     }
 
     /**

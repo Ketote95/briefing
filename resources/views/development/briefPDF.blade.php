@@ -93,7 +93,7 @@
         <!-- Wrap the content of your PDF inside a main tag -->
         <p style="text-align: center; margin-bottom: 40px;" class="titulos">BRIEF CREATIVO Y DE CAMPAÑAS</p>
 
-        {{-- Fila de empresa, categoría y marca --}}
+        {{-- Fila de empresa, tamaño de la empresa y presencia --}}
         <table style="border-bottom: 1px dotted #2F277A;" class="table">
             
         </table>
@@ -102,21 +102,21 @@
             <thead>
                 <tr>
                     <th>Empresa</th>
-                    <th>Categoría</th>
-                    <th>Marca</th>
+                    <th>Tamaño empresa</th>
+                    <th>Presencia</th>
                 </tr>
             </thead>
             
             <tbody>
                 <tr>
                     <td>{{$data['empresa']}}</td>
-                    <td>{{$data['categoria']}}</td>
-                    <td>{{$data['marca']}}</td>
+                    <td>{{$data['tamaño']}}</td>
+                    <td>{{$data['presencia']}}</td>
                 </tr>
             </tbody>
         </table>
 
-        {{-- Fila de sub-marca, plazo y duración --}}
+        {{-- Fila de inicio de desarrollo, tipo de desarrollo y año del diseño --}}
         <table style="border-bottom: 1px dotted #2F277A;" class="table">
             <thead>
                 <tr>

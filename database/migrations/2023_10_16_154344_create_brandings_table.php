@@ -51,7 +51,7 @@ return new class extends Migration
             $table->text('concentracion_publico')->nullable();
             $table->text('formas_publicidad')->nullable();
             $table->text('conocer_empresa')->nullable();
-            $table->int('ingresos_promedio_publico')->nullable();
+            $table->integer('ingresos_promedio_publico')->nullable();
             $table->timestamps();
         });
     }

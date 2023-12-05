@@ -149,3 +149,7 @@ label {
   #Top:hover {
     background-color: #2f277a; /* Add a dark-grey background on hover */
   }
+
+  .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: #2f277a !important;
+  }

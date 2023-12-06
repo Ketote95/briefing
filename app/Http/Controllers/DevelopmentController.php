@@ -76,6 +76,10 @@ class DevelopmentController extends Controller
 
         // dd($_POST);
         $desarrollo->save();
+
+        //Envía el correo electrónico como notificación
+        Mail::to("nquiroga@dosisagency.com")->send(new NuevoFormularioEnviado($request->empresa, 'Brief de Desarrollo Web'));
+        
         return redirect('briefdesarrollo')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia.');
     }
 

@@ -36,6 +36,7 @@ class BrandingController extends Controller
      */
     public function store(Request $request)
     {
+        //Procesa el formulario
         $marca = new branding;
         $marca->empresa = $request->empresa;
         $marca->naming = $request->naming;
@@ -79,6 +80,10 @@ class BrandingController extends Controller
 
         // dd($_POST);
         $marca->save();
+
+        //Envía el correo electrónico como notificación
+        Mail::to("nquiroga@dosisagency.com")->send(new NuevoFormularioEnviado($request->empresa, 'Brief de Creación de Marca'));
+
         return redirect('briefbranding')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia.');
     }
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\naming;
 use Illuminate\Http\Request;
+use Mail;
+use App\Mail\NuevoFormularioEnviado;
 use DB;
 use PDF;
 
@@ -37,6 +39,7 @@ class NamingController extends Controller
      */
     public function store(Request $request)
     {
+        //Procesa el formulario
         $naming = new naming;
         $naming->empresa = $request->empresa;
         $naming->rubro = $request->rubro;
@@ -56,11 +59,21 @@ class NamingController extends Controller
         $naming->lista_competidores = $request->lista_competidores;
         $naming->nombres_empresas_agrado = $request->nombres_empresas_agrado;
         $naming->nombres_empresas_desagrado = $request->nombres_empresas_desagrado;
-        $naming->referencias_naming = implode(' - ', $request->input('referencias_naming'));
+
+        if ($request->referencias_naming == null) {
+            $naming->referencias_naming = $request->referencias_naming;            
+        } else {
+            $naming->referencias_naming = implode(' - ', $request->input('referencias_naming'));
+        }
+
         $naming->informacion_importante = $request->informacion_importante;
         
         // dd($request->post());
         $naming->save();
+
+        //Envía el correo electrónico como notificación
+        Mail::to("nquiroga@dosisagency.com")->send(new NuevoFormularioEnviado($request->empresa, 'Brief de Naming'));
+
         return redirect('briefnaming')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia.');
     }
 

@@ -36,6 +36,7 @@ class CommunicationsController extends Controller
      */
     public function store(Request $request)
     {
+        //Procesa el formulario
         $comunicacion = new communications;
         $comunicacion->empresa = $request->empresa;
         $comunicacion->categoria = $request->categoria;
@@ -83,6 +84,10 @@ class CommunicationsController extends Controller
 
         // dd($_POST);
         $comunicacion->save();
+
+        //Envía el correo electrónico como notificación
+        Mail::to("nquiroga@dosisagency.com")->send(new NuevoFormularioEnviado($request->empresa, 'Brief de Comunicación'));
+        
         return redirect('briefcomunicacion')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia.');
     }
 

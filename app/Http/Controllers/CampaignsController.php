@@ -35,6 +35,7 @@ class CampaignsController extends Controller
      */
     public function store(Request $request)
     {
+        //Procesa el formulario
         $campaign = new campaigns;
         $campaign->empresa = $request->empresa;
         $campaign->categoria = $request->categoria;
@@ -61,6 +62,10 @@ class CampaignsController extends Controller
         $campaign->info_adicional = $request->info_adicional;
 
         $campaign->save();
+        
+        //Envía el correo electrónico como notificación
+        Mail::to("nquiroga@dosisagency.com")->send(new NuevoFormularioEnviado($request->empresa, 'Brief Creativo y de Campañas'));
+
         return redirect('briefcreativo')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia.');
     }
 

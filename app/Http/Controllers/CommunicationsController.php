@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\communications;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Mail;
+use App\Mail\NuevoFormularioEnviado;
 use DB;
 use PDF;
 

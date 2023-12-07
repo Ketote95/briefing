@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\branding;
 use Illuminate\Http\Request;
+use Mail;
+use App\Mail\NuevoFormularioEnviado;
 use DB;
 use PDF;
 

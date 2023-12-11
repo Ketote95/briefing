@@ -10,7 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
 <body>
-    <img src="<?php echo $_SERVER["DOCUMENT_ROOT"].'/storage/images/Header_briefs.jpeg';?>" width="100%" alt="Membrete top dosis">
+    <img src="{{asset('/storage/Header_briefs.jpg')}}" width="30%" alt="Encabezado briefs">
     <p style="font-family: 'Poppins'; color: #31297B;"><strong>Nombre de la Empresa: </strong><span style="color: #4D4D4D">{{$nombre}}</span></p>
     <p style="font-family: 'Poppins'; color: #31297B;"><strong>Tipo de Brief: </strong><span style="color: #4D4D4D">{{$tipo}}</span></p>
     <p style="font-family: 'Poppins'; color: #4D4D4D;">Ya está disponible su visualización en sistema</p>

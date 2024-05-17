@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('campaigns', function (Blueprint $table) {
             $table->id();
             $table->string('empresa', 100);
+            $table->string('tipo_brief', 50)->default("Creativo y de campañas");
             $table->string('categoria', 100);
             $table->string('marca', 100);
             $table->string('sub_marca', 100);

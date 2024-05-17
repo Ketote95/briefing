@@ -32,7 +32,9 @@
                 <a href="{{ url('briefdesarrollo') }}" id="btnDesarrollo" class="btn btn-primary mt-2">Desarrollo web</a>
                 <a href="{{ url('briefbranding') }}" id="btnBranding" class="btn btn-primary mt-2">Creación de marca</a>
                 <a href="{{ url('briefnaming') }}" id="btnNaming" class="btn btn-primary mt-2">Creación de nombre</a>
-            </div>   
+                <a href="{{ url('brief_fotografia') }}" id="btnFotografia" class="btn btn-primary mt-2">Producción fotográfica</a>
+                <a href="{{ url('brief_audiovisual') }}" id="btnAudiovisual" class="btn btn-primary mt-2">Producción audiovisual</a>
+            </div>
         </div>
 
         <div class="d-flex justify-content-center desktop">

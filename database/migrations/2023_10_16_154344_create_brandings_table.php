@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('brandings', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre_empresa', 80);
+            $table->string('empresa', 80);
+            $table->string('tipo_brief', 50)->default("Creación de marca");
             $table->string('naming', 50);
             $table->string('categoria', 50);
             $table->string('diferencia', 200);

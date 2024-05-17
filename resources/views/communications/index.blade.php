@@ -182,7 +182,7 @@
 
                 <div class="mb-3">
                     <label for="retos_digitalizacion" class="form-label">11. ¿Cuáles han sido sus mayores retos en el proceso de digitalización de su empresa? Tanto desde la perspectiva comercial, como de marketing y comunicación.</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="retos_digitalizacion" name="retos_digitalizacion" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->retos_digitalización)?$comunicacion->retos_digitalización:old('retos_digitalización') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="retos_digitalizacion" name="retos_digitalizacion" placeholder="Respuesta máxima de 500 caracteres">{{ isset($comunicacion->retos_digitalizacion)?$comunicacion->retos_digitalizacion:old('retos_digitalizacion') }}</textarea>
                 </div>
 
                 <div class="mb-3">

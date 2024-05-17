@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('developments', function (Blueprint $table) {
             $table->id();
-            $table->string("nombre", 50);
+            $table->string("empresa", 50);
+            $table->string('tipo_brief', 50)->default("Desarrollo web");
             $table->string("tamaño", 80);
             $table->string("presencia", 250);
             $table->string("inicio_desarrollo", 80);

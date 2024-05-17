@@ -56,3 +56,19 @@ Route::post('/briefnaming', [App\Http\Controllers\NamingController::class, 'stor
 
 //Generador de Brief creación de nombre en PDF
 Route::get('/naming/pdf', [App\Http\Controllers\NamingController::class, 'generatePDF'])->name('pdf_naming');
+
+// Rutas para los briefs de producción de fotografía
+Route::get('/brief_fotografia', [App\Http\Controllers\FotografiaController::class, 'index'])->name('fotografia');
+Route::get('/brief_fotografia/{id}', [App\Http\Controllers\FotografiaController::class, 'show']);
+Route::post('/brief_fotografia', [App\Http\Controllers\FotografiaController::class, 'store']);
+
+//Generador de Brief producción de fotografía en PDF
+Route::get('/fotografia/pdf', [App\Http\Controllers\FotografiaController::class, 'generatePDF'])->name('pdf_fotografia');
+
+// Rutas para los briefs de producción audiovisual
+Route::get('/brief_audiovisual', [App\Http\Controllers\AudiovisualController::class, 'index'])->name('audiovisual');
+Route::get('/brief_audiovisual/{id}', [App\Http\Controllers\AudiovisualController::class, 'show']);
+Route::post('/brief_audiovisual', [App\Http\Controllers\AudiovisualController::class, 'store']);
+
+//Generador de Brief producción audiovisual en PDF
+Route::get('/audiovisual/pdf', [App\Http\Controllers\AudiovisualController::class, 'generatePDF'])->name('pdf_audiovisual');

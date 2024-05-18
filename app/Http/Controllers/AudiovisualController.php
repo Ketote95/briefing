@@ -86,7 +86,11 @@ class AudiovisualController extends Controller
         }
         $audiovisual->voz_off = $request->voz_off;
         $audiovisual->genero_musical = $request->genero_musical;
-        $audiovisual->actores = $request->actores;
+        $actores = implode(", ", $request->input('actores'));
+        $audiovisual->actores = $actores;
+        if ($audiovisual->actores === "") {
+            $audiovisual->actores = null;
+        }
         $audiovisual->perfiles_requeridos = $request->perfiles_requeridos;
         $audiovisual->tomas_aereas = $request->tomas_aereas;
         $audiovisual->elementos_visuales = $request->elementos_visuales;

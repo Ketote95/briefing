@@ -520,7 +520,41 @@
 
                 <div class="mb-3">
                     <label for="actores" class="form-label">20. ¿Requiere contratar actores, modelos o figuras públicas para la producción?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="actores" name="actores" placeholder="Respuesta máxima de 500 caracteres">{{ isset($audiovisual->actores)?$audiovisual->actores:old('actores') }}</textarea>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="modelo" name="actores[]" value="Modelo">
+                            <label for="modelo" class="custom-control-label">Modelo</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="micro" name="actores[]" value="Micro-influencer">
+                            <label for="micro" class="custom-control-label">Micro-influencer</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="macro" name="actores[]" value="Macro-influencer">
+                            <label for="macro" class="custom-control-label">Macro-influencer</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="figura_publica" name="actores[]" value="Figura pública">
+                            <label for="figura_publica" class="custom-control-label">Figura pública</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="actor" name="actores[]" value="Actor/actriz">
+                            <label for="actor" class="custom-control-label">Actor/actriz</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="otros_actores" name="actores[]" value="">
+                            <label for="otros_actores" class="custom-control-label">Otros</label>
+                        </div>
+
+                        <div id="text_otros_actores" class="col-lg-4" style="display: none;">
+                            <input id="input_otros_actores" type="text" class="form-control" placeholder="Especifique otro tipo de figura púbica">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="mb-3">
@@ -676,6 +710,16 @@
                 }
                 $("#input_otros_formatos").change(function(){
                     $("#otros_formatos").val($(this).val());
+                });
+
+                // Para los actores
+                if($('#otros_actores').is(':checked')){
+                    $("#text_otros_actores").slideDown();
+                } else {
+                    $("#text_otros_actores").slideUp();
+                }
+                $("#input_otros_actores").change(function(){
+                    $("#otros_actores").val($(this).val());
                 });
             });
         </script>        

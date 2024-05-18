@@ -323,7 +323,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="actores" class="form-label">9.  ¿Requiere contratar actores, modelos o figuras públicas para la producción?</label>
+                    <label for="actores" class="form-label">9.  ¿Requiere contratar actores, modelos o figuras públicas para la producción?</label><span>(Marque todas las requeridas)</span>
                     <div class="form-group">
                         <div class="custom-control custom-checkbox">
                             <input class="custom-control-input" type="checkbox" id="modelo" name="actores[]" value="Modelo">

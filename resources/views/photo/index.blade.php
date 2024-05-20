@@ -32,7 +32,7 @@
                 <br>
                 Si llegaste hasta aquí, es porque has decidido depositar tu confianza en nuestro equipo y para nosotros eso representa un gran valor y compromiso de éxito.<br>
                 <br>
-                El propósito de las siguientes preguntas es obtener la mayor cantidad de información referente a tu empresa; ayudándonos a comprender su situación actual, fortalezas, oportunidades, objetivos y desventajas; permitiéndonos de esta manera, articular estrategias de comunicación que aporten valor y crecimiento.<br>
+                El propósito de las siguientes preguntas es obtener la mayor cantidad de información referente a tus necesidades; permitiéndonos de esta manera, planificar y realizar una producción fotográfica que capture de manera precisa y creativa la identidad y visión de tu marca.<br>
                 <br>
                 Por tal motivo, es de gran importancia que te tomes el tiempo suficiente para completar cada una de ellas.
             </div>
@@ -142,7 +142,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="tipos_fotografias" class="form-label">2. ¿Qué tipos de fotografías son necesarias?</label><span>(Marque todas las requeridas)</span>
+                    <label for="tipos_fotografias" class="form-label">2. ¿Qué tipos de fotografías son necesarias?</label><span> (Marque todas las requeridas)</span>
                     <div class="form-group">
                         <div class="custom-control custom-checkbox">
                             <input class="custom-control-input" type="checkbox" id="productos" name="tipos_fotografias[]" value="Productos">
@@ -252,7 +252,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="canales" class="form-label">8.	¿En qué canales se distribuirán estas fotografías?</label><span>(Marque todos las requeridos)</span>
+                    <label for="canales" class="form-label">8.	¿En qué canales se distribuirán estas fotografías?</label><span> (Marque todos las requeridos)</span>
                     <div class="form-group">
                         <label style="color: #2F277A; text-decoration: underline" for="canales-digitales">Uso Digital</label>
                         <div class="custom-control custom-checkbox">
@@ -323,7 +323,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="actores" class="form-label">9.  ¿Requiere contratar actores, modelos o figuras públicas para la producción?</label><span>(Marque todas las requeridas)</span>
+                    <label for="actores" class="form-label">9.  ¿Requiere contratar actores, modelos o figuras públicas para la producción?</label><span> (Marque todas las requeridas)</span>
                     <div class="form-group">
                         <div class="custom-control custom-checkbox">
                             <input class="custom-control-input" type="checkbox" id="modelo" name="actores[]" value="Modelo">
@@ -369,7 +369,7 @@
                 <div class="mb-3">
                     <label for="fecha_limite" class="form-label">11. ¿Cuál es la fecha límite para la entrega de las fotografías?</label>
                     <div class="col-lg-3">
-                        <input type="date" name="fecha_limite" id="fecha_limite" class="form-control">
+                        <input type="date" min="{{ date('Y-m-d') }}" name="fecha_limite" id="fecha_limite" class="form-control">
                     </div>
                 </div>                
 

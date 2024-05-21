@@ -144,60 +144,58 @@
 
                 <div class="mb-3">
                     <label for="tipos_fotografias" class="form-label">2. ¿Qué tipos de fotografías son necesarias?</label><span> (Marque todas las requeridas)</span>
-                    <div class="form-group">
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="productos" name="tipos_fotografias[]" value="Productos">
-                            <label for="productos" class="custom-control-label">Productos</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="experiencias_lifestyle" name="tipos_fotografias[]" value="Experiencias y Lifestyle">
-                            <label for="experiencias_lifestyle" class="custom-control-label">Experiencias y Lifestyle</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="alimentos" name="tipos_fotografias[]" value="Alimentos">
-                            <label for="alimentos" class="custom-control-label">Alimentos</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="corporativas" name="tipos_fotografias[]" value="Corporativas">
-                            <label for="corporativas" class="custom-control-label">Corporativas</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="productos" name="tipos_fotografias[]" value="Productos">
+                        <label for="productos" class="form-check-label">Productos</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="experiencias_lifestyle" name="tipos_fotografias[]" value="Experiencias y Lifestyle">
+                        <label for="experiencias_lifestyle" class="form-check-label">Experiencias y Lifestyle</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="alimentos" name="tipos_fotografias[]" value="Alimentos">
+                        <label for="alimentos" class="form-check-label">Alimentos</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="corporativas" name="tipos_fotografias[]" value="Corporativas">
+                        <label for="corporativas" class="form-check-label">Corporativas</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="retratos" name="tipos_fotografias[]" value="Retratos">
-                            <label for="retratos" class="custom-control-label">Retratos</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="retratos" name="tipos_fotografias[]" value="Retratos">
+                        <label for="retratos" class="form-check-label">Retratos</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="paisajes" name="tipos_fotografias[]" value="Paisajes">
-                            <label for="paisajes" class="custom-control-label">Paisajes</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="paisajes" name="tipos_fotografias[]" value="Paisajes">
+                        <label for="paisajes" class="form-check-label">Paisajes</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="eventos" name="tipos_fotografias[]" value="Eventos">
-                            <label for="eventos" class="custom-control-label">Eventos</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="eventos" name="tipos_fotografias[]" value="Eventos">
+                        <label for="eventos" class="form-check-label">Eventos</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="arquitectura" name="tipos_fotografias[]" value="Arquitectura">
-                            <label for="arquitectura" class="custom-control-label">Arquitectura</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="arquitectura" name="tipos_fotografias[]" value="Arquitectura">
+                        <label for="arquitectura" class="form-check-label">Arquitectura</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="aereas" name="tipos_fotografias[]" value="Aéreas">
-                            <label for="aereas" class="custom-control-label">Aéreas</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="aereas" name="tipos_fotografias[]" value="Aéreas">
+                        <label for="aereas" class="form-check-label">Aéreas</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="otros_tipos_fotografias" name="tipos_fotografias[]" value="">
-                            <label for="otros_tipos_fotografias" class="custom-control-label">Otros</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="otros_tipos_fotografias" name="tipos_fotografias[]" value="">
+                        <label for="otros_tipos_fotografias" class="form-check-label">Otros</label>
+                    </div>
 
-                        <div id="text_tipos_fotografias" class="col-lg-4" style="display: none;">
-                            <input id="input_tipos_fotografias" type="text" class="form-control" placeholder="Especifique otros tipos de fotografía">
-                        </div>
+                    <div id="text_tipos_fotografias" class="col-lg-4" style="display: none;">
+                        <input id="input_tipos_fotografias" type="text" class="form-control" placeholder="Especifique otros tipos de fotografía">
                     </div>
                 </div>
 
@@ -225,151 +223,145 @@
 
                 <div class="mb-3">
                     <label for="formatos" class="form-label">7. ¿Qué formatos son necesarios para las fotografías?</label>
-                    <div class="form-group">
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="vertical" name="formatos[]" value="Vertical (9:16)">
-                            <label for="vertical" class="custom-control-label">Vertical (9:16)</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="horizontal" name="formatos[]" value="Horizontal (16:9)">
-                            <label for="horizontal" class="custom-control-label">Horizontal (16:9)</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="cuadrado" name="formatos[]" value="Cuadrado (1:1)">
-                            <label for="cuadrado" class="custom-control-label">Cuadrado (1:1)</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="otros_formatos" name="formatos[]" value="">
-                            <label for="otros_formatos" class="custom-control-label">Otros</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="vertical" name="formatos[]" value="Vertical (9:16)">
+                        <label for="vertical" class="form-check-label">Vertical (9:16)</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="horizontal" name="formatos[]" value="Horizontal (16:9)">
+                        <label for="horizontal" class="form-check-label">Horizontal (16:9)</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cuadrado" name="formatos[]" value="Cuadrado (1:1)">
+                        <label for="cuadrado" class="form-check-label">Cuadrado (1:1)</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="otros_formatos" name="formatos[]" value="">
+                        <label for="otros_formatos" class="form-check-label">Otros</label>
+                    </div>
 
-                        <div id="text_otros_formatos" class="col-lg-4" style="display: none;">
-                            <input id="input_otros_formatos" type="text" class="form-control" name="" placeholder="Especifique los formatos">
-                        </div>
+                    <div id="text_otros_formatos" class="col-lg-4" style="display: none;">
+                        <input id="input_otros_formatos" type="text" class="form-control" name="" placeholder="Especifique los formatos">
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="canales" class="form-label">8.	¿En qué canales se distribuirán estas fotografías?</label><span> (Marque todos las requeridos)</span>
-                    <div class="form-group">
-                        <label style="color: #2F277A; font-weight: bold" for="canales-digitales">Uso Digital</label>
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="facebook" name="canales[]" value="Facebook">
-                            <label for="facebook" class="custom-control-label">Facebook</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="instagram" name="canales[]" value="Instagram">
-                            <label for="instagram" class="custom-control-label">Instagram</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="tiktok" name="canales[]" value="TikTok">
-                            <label for="tiktok" class="custom-control-label">TikTok</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="linkedin" name="canales[]" value="LinkedIn">
-                            <label for="linkedin" class="custom-control-label">LinkedIn</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="youtube" name="canales[]" value="YouTube">
-                            <label for="youtube" class="custom-control-label">YouTube</label>
-                        </div>
+                    <label style="color: #2F277A; font-weight: bold" for="canales-digitales">Uso Digital</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="facebook" name="canales[]" value="Facebook">
+                        <label for="facebook" class="form-check-label">Facebook</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="instagram" name="canales[]" value="Instagram">
+                        <label for="instagram" class="form-check-label">Instagram</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="tiktok" name="canales[]" value="TikTok">
+                        <label for="tiktok" class="form-check-label">TikTok</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="linkedin" name="canales[]" value="LinkedIn">
+                        <label for="linkedin" class="form-check-label">LinkedIn</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="youtube" name="canales[]" value="YouTube">
+                        <label for="youtube" class="form-check-label">YouTube</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="sitio_web" name="canales[]" value="Sitio Web">
-                            <label for="sitio_web" class="custom-control-label">Sitio Web</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sitio_web" name="canales[]" value="Sitio Web">
+                        <label for="sitio_web" class="form-check-label">Sitio Web</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="mailing" name="canales[]" value="Mailing">
-                            <label for="mailing" class="custom-control-label">Mailing</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="mailing" name="canales[]" value="Mailing">
+                        <label for="mailing" class="form-check-label">Mailing</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="otros_canales" name="canales[]" value="">
-                            <label for="otros_canales" class="custom-control-label">Otros</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="otros_canales" name="canales[]" value="">
+                        <label for="otros_canales" class="form-check-label">Otros</label>
+                    </div>
 
-                        <div id="text_otros_canales" class="col-lg-4" style="display: none;">
-                            <input id="input_otros_canales" type="text" class="form-control" placeholder="Especifique los canales">
-                        </div>
+                    <div id="text_otros_canales" class="col-lg-4" style="display: none;">
+                        <input id="input_otros_canales" type="text" class="form-control" placeholder="Especifique los canales">
+                    </div>
 
-                        <br>
+                    <br>
 
-                        <label style="color: #2F277A; font-weight: bold" for="canales-impresos">Impresos</label>
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="vallas" name="canales[]" value="Vallas">
-                            <label for="vallas" class="custom-control-label">Vallas</label>
-                        </div>
+                    <label style="color: #2F277A; font-weight: bold" for="canales-impresos">Impresos</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="vallas" name="canales[]" value="Vallas">
+                        <label for="vallas" class="form-check-label">Vallas</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="revistas" name="canales[]" value="Revistas">
-                            <label for="revistas" class="custom-control-label">Revistas</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="revistas" name="canales[]" value="Revistas">
+                        <label for="revistas" class="form-check-label">Revistas</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="catalogos" name="canales[]" value="Catálogos">
-                            <label for="catalogos" class="custom-control-label">Catálogos</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="catalogos" name="canales[]" value="Catálogos">
+                        <label for="catalogos" class="form-check-label">Catálogos</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="volantes_folletos" name="canales[]" value="Volantes o folletos">
-                            <label for="volantes_folletos" class="custom-control-label">Volantes o folletos</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="volantes_folletos" name="canales[]" value="Volantes o folletos">
+                        <label for="volantes_folletos" class="form-check-label">Volantes o folletos</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="otros_canales_impresos" name="canales[]" value="">
-                            <label for="otros_canales_impresos" class="custom-control-label">Otros</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="otros_canales_impresos" name="canales[]" value="">
+                        <label for="otros_canales_impresos" class="form-check-label">Otros</label>
+                    </div>
 
-                        <div id="text_otros_canales_impresos" class="col-lg-4" style="display: none;">
-                            <input id="input_otros_canales_impresos" type="text" class="form-control" placeholder="Especifique los canales">
-                        </div>
+                    <div id="text_otros_canales_impresos" class="col-lg-4" style="display: none;">
+                        <input id="input_otros_canales_impresos" type="text" class="form-control" placeholder="Especifique los canales">
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="actores" class="form-label">9.  ¿Requiere contratar actores, modelos o figuras públicas para la producción?</label><span> (Marque todas las requeridas)</span>
-                    <div class="form-group">
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="modelo" name="actores[]" value="Modelo">
-                            <label for="modelo" class="custom-control-label">Modelo</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="modelo" name="actores[]" value="Modelo">
+                        <label for="modelo" class="form-check-label">Modelo</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="micro" name="actores[]" value="Micro-influencer">
-                            <label for="micro" class="custom-control-label">Micro-influencer</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="micro" name="actores[]" value="Micro-influencer">
+                        <label for="micro" class="form-check-label">Micro-influencer</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="macro" name="actores[]" value="Macro-influencer">
-                            <label for="macro" class="custom-control-label">Macro-influencer</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="macro" name="actores[]" value="Macro-influencer">
+                        <label for="macro" class="form-check-label">Macro-influencer</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="figura_publica" name="actores[]" value="Figura pública">
-                            <label for="figura_publica" class="custom-control-label">Figura pública</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="figura_publica" name="actores[]" value="Figura pública">
+                        <label for="figura_publica" class="form-check-label">Figura pública</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="actor" name="actores[]" value="Actor/actriz">
-                            <label for="actor" class="custom-control-label">Actor/actriz</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="actor" name="actores[]" value="Actor/actriz">
+                        <label for="actor" class="form-check-label">Actor/actriz</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="otros_actores" name="actores[]" value="">
-                            <label for="otros_actores" class="custom-control-label">Otros</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="otros_actores" name="actores[]" value="">
+                        <label for="otros_actores" class="form-check-label">Otros</label>
+                    </div>
 
-                        <div id="text_otros_actores" class="col-lg-4" style="display: none;">
-                            <input id="input_otros_actores" type="text" class="form-control" placeholder="Especifique otro tipo de figura púbica">
-                        </div>
+                    <div id="text_otros_actores" class="col-lg-4" style="display: none;">
+                        <input id="input_otros_actores" type="text" class="form-control" placeholder="Especifique otro tipo de figura púbica">
                     </div>
                 </div>
 

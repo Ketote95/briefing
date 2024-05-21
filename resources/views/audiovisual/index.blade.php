@@ -162,124 +162,120 @@
 
                 <div class="mb-3">
                     <label for="tipo_video" class="form-label">4. ¿Cuál es el tipo de video requerido?</label>
-                    <div class="form-group">
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="comercial" name="tipo_video" value="Comercial">
-                            <label for="comercial" class="custom-control-label">Comercial</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="corporativo" name="tipo_video" value="Corporativo">
-                            <label for="corporativo" class="custom-control-label">Corporativo</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="entrevista" name="tipo_video" value="Entrevista">
-                            <label for="entrevista" class="custom-control-label">Entrevista</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="testimonial" name="tipo_video" value="Testimonial">
-                            <label for="testimonial" class="custom-control-label">Testimonial</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="storytelling" name="tipo_video" value="Storytelling">
-                            <label for="storytelling" class="custom-control-label">Storytelling</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="comercial" name="tipo_video" value="Comercial">
+                        <label for="comercial" class="form-check-label">Comercial</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="corporativo" name="tipo_video" value="Corporativo">
+                        <label for="corporativo" class="form-check-label">Corporativo</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="entrevista" name="tipo_video" value="Entrevista">
+                        <label for="entrevista" class="form-check-label">Entrevista</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="testimonial" name="tipo_video" value="Testimonial">
+                        <label for="testimonial" class="form-check-label">Testimonial</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="storytelling" name="tipo_video" value="Storytelling">
+                        <label for="storytelling" class="form-check-label">Storytelling</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="tutorial" name="tipo_video" value="Tutorial">
-                            <label for="tutorial" class="custom-control-label">Tutorial (Humnanizado, motion graphics, etc)</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="tutorial" name="tipo_video" value="Tutorial">
+                        <label for="tutorial" class="form-check-label">Tutorial (Humnanizado, motion graphics, etc)</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="social_media" name="tipo_video" value="Social Media">
-                            <label for="social_media" class="custom-control-label">Social Media</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="social_media" name="tipo_video" value="Social Media">
+                        <label for="social_media" class="form-check-label">Social Media</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="cobertura_eventos" name="tipo_video" value="Cobertura de eventos">
-                            <label for="cobertura_eventos" class="custom-control-label">Cobertura de eventos</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="cobertura_eventos" name="tipo_video" value="Cobertura de eventos">
+                        <label for="cobertura_eventos" class="form-check-label">Cobertura de eventos</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="podcast" name="tipo_video" value="Podcast">
-                            <label for="podcast" class="custom-control-label">Podcast</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="podcast" name="tipo_video" value="Podcast">
+                        <label for="podcast" class="form-check-label">Podcast</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="otro" name="tipo_video" value="Otro">
-                            <label for="otro" class="custom-control-label">Otro</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="otro" name="tipo_video" value="Otro">
+                        <label for="otro" class="form-check-label">Otro</label>
+                    </div>
 
-                        <div id="otro_tipo_video" class="col-lg-4" style="display: none;">
-                            <input id="input_otro_video" type="text" class="form-control" name="" placeholder="Especifique">
-                        </div>
+                    <div id="otro_tipo_video" class="col-lg-4" style="display: none;">
+                        <input id="input_otro_video" type="text" class="form-control" name="" placeholder="Especifique">
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="tono_deseado" class="form-label">5. ¿Cuál es el tono deseado para el video?</label><span> (Marque todas las requeridas)</span>
-                    <div class="form-group">
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="formal" name="tono_deseado[]" value="Formal">
-                            <label for="formal" class="custom-control-label">Formal</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="informal" name="tono_deseado[]" value="Informal">
-                            <label for="informal" class="custom-control-label">Informal</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="comercial" name="tono_deseado[]" value="Comercial">
-                            <label for="comercial" class="custom-control-label">Comercial</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="inspirador" name="tono_deseado[]" value="Inspirador">
-                            <label for="inspirador" class="custom-control-label">Inspirador</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="emotivo" name="tono_deseado[]" value="Emotivo">
-                            <label for="emotivo" class="custom-control-label">Emotivo</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="formal" name="tono_deseado[]" value="Formal">
+                        <label for="formal" class="form-check-label">Formal</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="informal" name="tono_deseado[]" value="Informal">
+                        <label for="informal" class="form-check-label">Informal</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="comercial" name="tono_deseado[]" value="Comercial">
+                        <label for="comercial" class="form-check-label">Comercial</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="inspirador" name="tono_deseado[]" value="Inspirador">
+                        <label for="inspirador" class="form-check-label">Inspirador</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="emotivo" name="tono_deseado[]" value="Emotivo">
+                        <label for="emotivo" class="form-check-label">Emotivo</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="informativo" name="tono_deseado[]" value="Informativo">
-                            <label for="informativo" class="custom-control-label">Informativo</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="informativo" name="tono_deseado[]" value="Informativo">
+                        <label for="informativo" class="form-check-label">Informativo</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="didactico" name="tono_deseado[]" value="Didáctico">
-                            <label for="didactico" class="custom-control-label">Didáctico</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="didactico" name="tono_deseado[]" value="Didáctico">
+                        <label for="didactico" class="form-check-label">Didáctico</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="emotivo" name="tono_deseado[]" value="Humorístico">
-                            <label for="emotivo" class="custom-control-label">Humorístico</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="emotivo" name="tono_deseado[]" value="Humorístico">
+                        <label for="emotivo" class="form-check-label">Humorístico</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="musical" name="tono_deseado[]" value="Musical">
-                            <label for="musical" class="custom-control-label">Musical</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="musical" name="tono_deseado[]" value="Musical">
+                        <label for="musical" class="form-check-label">Musical</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="infantil" name="tono_deseado[]" value="Infantil">
-                            <label for="infantil" class="custom-control-label">Infantil</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="infantil" name="tono_deseado[]" value="Infantil">
+                        <label for="infantil" class="form-check-label">Infantil</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="otro_tono" name="tono_deseado[]" value="">
-                            <label for="otro_tono" class="custom-control-label">Otro</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="otro_tono" name="tono_deseado[]" value="">
+                        <label for="otro_tono" class="form-check-label">Otro</label>
+                    </div>
 
-                        <div id="otro_tono_deseado" class="col-lg-4" style="display: none;">
-                            <input id="input_otro_tono" type="text" class="form-control" name="" placeholder="Especifique el tono">
-                        </div>
+                    <div id="otro_tono_deseado" class="col-lg-4" style="display: none;">
+                        <input id="input_otro_tono" type="text" class="form-control" name="" placeholder="Especifique el tono">
                     </div>
                 </div>
 
@@ -295,35 +291,33 @@
 
                 <div class="mb-3">
                     <label for="duracion_videos" class="form-label">8. ¿Qué duración le gustaría que tuviera el / los videos?</label>
-                    <div class="form-group">
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="15_segs" name="duracion_videos" value="Entre 15 y 30 segundos">
-                            <label for="15_segs" class="custom-control-label">Entre 15 y 30 segundos</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="30_segs" name="duracion_videos" value="Entre 30 y 45 segundos">
-                            <label for="30_segs" class="custom-control-label">Entre 30 y 45 segundos</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="1_min" name="duracion_videos" value="Entre 1 y 2 minutos">
-                            <label for="1_min" class="custom-control-label">Entre 1 y 2 minutos</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="2_min" name="duracion_videos" value="Entre 2 y 5 minutos">
-                            <label for="2_min" class="custom-control-label">Entre 2 y 5 minutos</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="otra_duracion" name="duracion_videos" value="">
-                            <label for="otra_duracion" class="custom-control-label">Otro</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="15_segs" name="duracion_videos" value="Entre 15 y 30 segundos">
+                        <label for="15_segs" class="form-check-label">Entre 15 y 30 segundos</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="30_segs" name="duracion_videos" value="Entre 30 y 45 segundos">
+                        <label for="30_segs" class="form-check-label">Entre 30 y 45 segundos</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="1_min" name="duracion_videos" value="Entre 1 y 2 minutos">
+                        <label for="1_min" class="form-check-label">Entre 1 y 2 minutos</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="2_min" name="duracion_videos" value="Entre 2 y 5 minutos">
+                        <label for="2_min" class="form-check-label">Entre 2 y 5 minutos</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="otra_duracion" name="duracion_videos" value="">
+                        <label for="otra_duracion" class="form-check-label">Otro</label>
+                    </div>
 
-                        <div id="text_otra_duracion" class="col-lg-9" style="display: none;">
-                            <input id="input_otra_duracion" type="text" class="form-control" name="" placeholder="En caso de que sea más de 1 video, especifique la duración de cada uno (Este texto va en otros)">
-                        </div>
+                    <div id="text_otra_duracion" class="col-lg-9" style="display: none;">
+                        <input id="input_otra_duracion" type="text" class="form-control" name="" placeholder="En caso de que sea más de 1 video, especifique la duración de cada uno (Este texto va en otros)">
                     </div>
                 </div>
 
@@ -339,94 +333,90 @@
 
                 <div class="mb-3">
                     <label for="canales" class="form-label">11. ¿En qué canales se distribuirá el video?</label><span> (Marque todas las requeridas)</span>
-                    <div class="form-group">
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="facebook" name="canales[]" value="Facebook">
-                            <label for="facebook" class="custom-control-label">Facebook</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="instagram" name="canales[]" value="Instagram">
-                            <label for="instagram" class="custom-control-label">Instagram</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="tiktok" name="canales[]" value="TikTok">
-                            <label for="tiktok" class="custom-control-label">TikTok</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="linkedin" name="canales[]" value="LinkedIn">
-                            <label for="linkedin" class="custom-control-label">LinkedIn</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="youtube" name="canales[]" value="YouTube">
-                            <label for="youtube" class="custom-control-label">YouTube</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="facebook" name="canales[]" value="Facebook">
+                        <label for="facebook" class="form-check-label">Facebook</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="instagram" name="canales[]" value="Instagram">
+                        <label for="instagram" class="form-check-label">Instagram</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="tiktok" name="canales[]" value="TikTok">
+                        <label for="tiktok" class="form-check-label">TikTok</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="linkedin" name="canales[]" value="LinkedIn">
+                        <label for="linkedin" class="form-check-label">LinkedIn</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="youtube" name="canales[]" value="YouTube">
+                        <label for="youtube" class="form-check-label">YouTube</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="sitio_web" name="canales[]" value="Sitio Web">
-                            <label for="sitio_web" class="custom-control-label">Sitio Web</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="sitio_web" name="canales[]" value="Sitio Web">
+                        <label for="sitio_web" class="form-check-label">Sitio Web</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="mailing" name="canales[]" value="Mailing">
-                            <label for="mailing" class="custom-control-label">Mailing</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="mailing" name="canales[]" value="Mailing">
+                        <label for="mailing" class="form-check-label">Mailing</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="tv" name="canales[]" value="TV">
-                            <label for="tv" class="custom-control-label">TV</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="tv" name="canales[]" value="TV">
+                        <label for="tv" class="form-check-label">TV</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="cine" name="canales[]" value="Cine">
-                            <label for="cine" class="custom-control-label">Cine</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cine" name="canales[]" value="Cine">
+                        <label for="cine" class="form-check-label">Cine</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="pantallas_gigantes" name="canales[]" value="Pantallas Gigantes">
-                            <label for="pantallas_gigantes" class="custom-control-label">Pantallas Gigantes</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="pantallas_gigantes" name="canales[]" value="Pantallas Gigantes">
+                        <label for="pantallas_gigantes" class="form-check-label">Pantallas Gigantes</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="otros_canales" name="canales[]" value="">
-                            <label for="otros_canales" class="custom-control-label">Otros</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="otros_canales" name="canales[]" value="">
+                        <label for="otros_canales" class="form-check-label">Otros</label>
+                    </div>
 
-                        <div id="text_otros_canales" class="col-lg-4" style="display: none;">
-                            <input id="input_otros_canales" type="text" class="form-control" name="" placeholder="Especifique los canales">
-                        </div>
+                    <div id="text_otros_canales" class="col-lg-4" style="display: none;">
+                        <input id="input_otros_canales" type="text" class="form-control" name="" placeholder="Especifique los canales">
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="dimensiones" class="form-label">12. ¿Cuáles son las dimensiones de video requeridas?</label><span> (Marque todas las requeridas)</span>
-                    <div class="form-group">
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="vertical" name="dimensiones[]" value="Vertical (9:16)">
-                            <label for="vertical" class="custom-control-label">Vertical (9:16)</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="horizontal" name="dimensiones[]" value="Horizontal (16:9)">
-                            <label for="horizontal" class="custom-control-label">Horizontal (16:9)</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="cuadrado" name="dimensiones[]" value="Cuadrado (1:1)">
-                            <label for="cuadrado" class="custom-control-label">Cuadrado (1:1)</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="otras_dimensiones" name="dimensiones[]" value="">
-                            <label for="otras_dimensiones" class="custom-control-label">Otras</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="vertical" name="dimensiones[]" value="Vertical (9:16)">
+                        <label for="vertical" class="form-check-label">Vertical (9:16)</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="horizontal" name="dimensiones[]" value="Horizontal (16:9)">
+                        <label for="horizontal" class="form-check-label">Horizontal (16:9)</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="cuadrado" name="dimensiones[]" value="Cuadrado (1:1)">
+                        <label for="cuadrado" class="form-check-label">Cuadrado (1:1)</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="otras_dimensiones" name="dimensiones[]" value="">
+                        <label for="otras_dimensiones" class="form-check-label">Otras</label>
+                    </div>
 
-                        <div id="text_otras_dimensiones" class="col-lg-4" style="display: none;">
-                            <input id="input_otras_dimensiones" type="text" class="form-control" name="" placeholder="Especifique las dimensiones">
-                        </div>
+                    <div id="text_otras_dimensiones" class="col-lg-4" style="display: none;">
+                        <input id="input_otras_dimensiones" type="text" class="form-control" name="" placeholder="Especifique las dimensiones">
                     </div>
                 </div>
 
@@ -456,60 +446,56 @@
 
                 <div class="mb-3">
                     <label for="formatos" class="form-label">17. ¿Qué formatos de sonido y musicalización desea aplicar para los materiales?</label><span> (Marque todas las requeridas)</span>
-                    <div class="form-group">
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="voz_enoff" name="formatos[]" value="Voz en off">
-                            <label for="voz_enoff" class="custom-control-label">Voz en off</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="musica" name="formatos[]" value="Música libre de derechos">
-                            <label for="musica" class="custom-control-label">Música libre de derechos</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="jingles" name="formatos[]" value="Jingles">
-                            <label for="jingles" class="custom-control-label">Jingles</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="doblaje" name="formatos[]" value="Doblaje">
-                            <label for="doblaje" class="custom-control-label">Doblaje</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="otros_formatos" name="formatos[]" value="">
-                            <label for="otros_formatos" class="custom-control-label">Otros</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="voz_enoff" name="formatos[]" value="Voz en off">
+                        <label for="voz_enoff" class="form-check-label">Voz en off</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="musica" name="formatos[]" value="Música libre de derechos">
+                        <label for="musica" class="form-check-label">Música libre de derechos</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="jingles" name="formatos[]" value="Jingles">
+                        <label for="jingles" class="form-check-label">Jingles</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="doblaje" name="formatos[]" value="Doblaje">
+                        <label for="doblaje" class="form-check-label">Doblaje</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="otros_formatos" name="formatos[]" value="">
+                        <label for="otros_formatos" class="form-check-label">Otros</label>
+                    </div>
 
-                        <div id="text_otros_formatos" class="col-lg-4" style="display: none;">
-                            <input id="input_otros_formatos" type="text" class="form-control" name="" placeholder="Especifique los formatos">
-                        </div>
+                    <div id="text_otros_formatos" class="col-lg-4" style="display: none;">
+                        <input id="input_otros_formatos" type="text" class="form-control" name="" placeholder="Especifique los formatos">
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="voz_off" class="form-label">18. En caso de requerir voz en off, esta debe ser:</label>
-                    <div class="form-group">
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="masculina" name="voz_off" value="Masculina">
-                            <label for="masculina" class="custom-control-label">Masculina</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="femenina" name="voz_off" value="Femenina">
-                            <label for="femenina" class="custom-control-label">Femenina</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="indiferente" name="voz_off" value="Me es indiferente">
-                            <label for="indiferente" class="custom-control-label">Me es indiferente</label>
-                        </div>
-                        
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="radio" id="no_necesito" name="voz_off" value="No necesito">
-                            <label for="no_necesito" class="custom-control-label">No necesito</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="masculina" name="voz_off" value="Masculina">
+                        <label for="masculina" class="form-check-label">Masculina</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="femenina" name="voz_off" value="Femenina">
+                        <label for="femenina" class="form-check-label">Femenina</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="indiferente" name="voz_off" value="Me es indiferente">
+                        <label for="indiferente" class="form-check-label">Me es indiferente</label>
+                    </div>
+                    
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" id="no_necesito" name="voz_off" value="No necesito">
+                        <label for="no_necesito" class="form-check-label">No necesito</label>
                     </div>
                 </div>
 
@@ -520,40 +506,38 @@
 
                 <div class="mb-3">
                     <label for="actores" class="form-label">20. ¿Requiere contratar actores, modelos o figuras públicas para la producción?</label><span> (Marque todas las requeridas)</span>
-                    <div class="form-group">
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="modelo" name="actores[]" value="Modelo">
-                            <label for="modelo" class="custom-control-label">Modelo</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="modelo" name="actores[]" value="Modelo">
+                        <label for="modelo" class="form-check-label">Modelo</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="micro" name="actores[]" value="Micro-influencer">
-                            <label for="micro" class="custom-control-label">Micro-influencer</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="micro" name="actores[]" value="Micro-influencer">
+                        <label for="micro" class="form-check-label">Micro-influencer</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="macro" name="actores[]" value="Macro-influencer">
-                            <label for="macro" class="custom-control-label">Macro-influencer</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="macro" name="actores[]" value="Macro-influencer">
+                        <label for="macro" class="form-check-label">Macro-influencer</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="figura_publica" name="actores[]" value="Figura pública">
-                            <label for="figura_publica" class="custom-control-label">Figura pública</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="figura_publica" name="actores[]" value="Figura pública">
+                        <label for="figura_publica" class="form-check-label">Figura pública</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="actor" name="actores[]" value="Actor/actriz">
-                            <label for="actor" class="custom-control-label">Actor/actriz</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="actor" name="actores[]" value="Actor/actriz">
+                        <label for="actor" class="form-check-label">Actor/actriz</label>
+                    </div>
 
-                        <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="otros_actores" name="actores[]" value="">
-                            <label for="otros_actores" class="custom-control-label">Otros</label>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="otros_actores" name="actores[]" value="">
+                        <label for="otros_actores" class="form-check-label">Otros</label>
+                    </div>
 
-                        <div id="text_otros_actores" class="col-lg-4" style="display: none;">
-                            <input id="input_otros_actores" type="text" class="form-control" placeholder="Especifique otro tipo de figura púbica">
-                        </div>
+                    <div id="text_otros_actores" class="col-lg-4" style="display: none;">
+                        <input id="input_otros_actores" type="text" class="form-control" placeholder="Especifique otro tipo de figura púbica">
                     </div>
                 </div>
 

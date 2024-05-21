@@ -3,9 +3,21 @@ body {
     background-color: rgb(53, 208, 132);
 }
 
-.custom-control-label {
+/* Estilos para los checkboxes */
+.form-check-label {
     font-weight: 400;
 }
+
+.form-check > .form-check-input:checked {
+    background-color: rgb(53, 208, 132);
+    border-color: rgb(53, 208, 132);
+}
+
+.form-check > .form-check-input:focus {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(53, 208, 132, 0.25);
+    border-color: rgb(53, 208, 132);
+}
+/* Fin de estilos para los checkboxes */
 
 .contenedor-formulario {
     box-shadow: 0px 0px 10px rgba(34, 34, 34, 0.459);

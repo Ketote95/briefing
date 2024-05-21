@@ -72,9 +72,9 @@ class FotografiaController extends Controller
             $fotografia->canales = null;
         }
         $actores = implode(", ", $request->input('actores'));
-        $audiovisual->actores = $actores;
-        if ($audiovisual->actores === "") {
-            $audiovisual->actores = null;
+        $fotografia->actores = $actores;
+        if ($fotografia->actores === "") {
+            $fotografia->actores = null;
         }
         $fotografia->perfiles_requeridos = $request->perfiles_requeridos;
         $fotografia->fecha_limite = $request->fecha_limite;

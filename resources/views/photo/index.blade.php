@@ -15,7 +15,8 @@
         {{-- Poppins Font --}}
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
         
     </head>
 
@@ -254,7 +255,7 @@
                 <div class="mb-3">
                     <label for="canales" class="form-label">8.	¿En qué canales se distribuirán estas fotografías?</label><span> (Marque todos las requeridos)</span>
                     <div class="form-group">
-                        <label style="color: #2F277A; text-decoration: underline" for="canales-digitales">Uso Digital</label>
+                        <label style="color: #2F277A; font-weight: bold" for="canales-digitales">Uso Digital</label>
                         <div class="custom-control custom-checkbox">
                             <input class="custom-control-input" type="checkbox" id="facebook" name="canales[]" value="Facebook">
                             <label for="facebook" class="custom-control-label">Facebook</label>
@@ -299,7 +300,9 @@
                             <input id="input_otros_canales" type="text" class="form-control" placeholder="Especifique los canales">
                         </div>
 
-                        <label style="color: #2F277A; text-decoration: underline" for="canales-impresos">Impresos</label>
+                        <br>
+
+                        <label style="color: #2F277A; font-weight: bold" for="canales-impresos">Impresos</label>
                         <div class="custom-control custom-checkbox">
                             <input class="custom-control-input" type="checkbox" id="vallas" name="canales[]" value="Vallas">
                             <label for="vallas" class="custom-control-label">Vallas</label>
@@ -318,6 +321,15 @@
                         <div class="custom-control custom-checkbox">
                             <input class="custom-control-input" type="checkbox" id="volantes_folletos" name="canales[]" value="Volantes o folletos">
                             <label for="volantes_folletos" class="custom-control-label">Volantes o folletos</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="otros_canales_impresos" name="canales[]" value="">
+                            <label for="otros_canales_impresos" class="custom-control-label">Otros</label>
+                        </div>
+
+                        <div id="text_otros_canales_impresos" class="col-lg-4" style="display: none;">
+                            <input id="input_otros_canales_impresos" type="text" class="form-control" placeholder="Especifique los canales">
                         </div>
                     </div>
                 </div>
@@ -448,7 +460,7 @@
                     $("#otros_formatos").val($(this).val());
                 });
                 
-                // Para los canales de distribución de las fotografías
+                // Para los canales de distribución digitales de las fotografías
                 if($('#otros_canales').is(':checked')){
                     $("#text_otros_canales").slideDown();
                 } else {
@@ -457,7 +469,17 @@
                 $("#input_otros_canales").change(function(){
                     $("#otros_canales").val($(this).val());
                 });
-                
+
+                // Para los canales de distribución impresos de las fotografías
+                if($('#otros_canales_impresos').is(':checked')){
+                    $("#text_otros_canales_impresos").slideDown();
+                } else {
+                    $("#text_otros_canales_impresos").slideUp();
+                }
+                $("#input_otros_canales_impresos").change(function(){
+                    $("#otros_canales_impresos").val($(this).val());
+                });
+
                 // Para los actores
                 if($('#otros_actores').is(':checked')){
                     $("#text_otros_actores").slideDown();

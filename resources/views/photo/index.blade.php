@@ -250,6 +250,7 @@
 
                 <div class="mb-3">
                     <label for="canales" class="form-label">8.	¿En qué canales se distribuirán estas fotografías?</label><span> (Marque todos las requeridos)</span>
+                    <br>
                     <label style="color: #2F277A; font-weight: bold" for="canales-digitales">Uso Digital</label>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="facebook" name="canales[]" value="Facebook">

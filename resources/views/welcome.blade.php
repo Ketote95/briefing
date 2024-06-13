@@ -34,6 +34,8 @@
                 <a href="{{ url('briefnaming') }}" id="btnNaming" class="btn btn-primary mt-2">Creación de nombre</a>
                 <a href="{{ url('brief_fotografia') }}" id="btnFotografia" class="btn btn-primary mt-2">Producción fotográfica</a>
                 <a href="{{ url('brief_audiovisual') }}" id="btnAudiovisual" class="btn btn-primary mt-2">Producción audiovisual</a>
+                <a href="{{ url('brief_planning') }}" id="btnPlanning" class="btn btn-primary mt-2">Planning digital</a>
+                <a href="{{ url('brief_planning_new') }}" id="btnPlanningNew" class="btn btn-primary mt-2">Planning digital nuevo cliente</a>
             </div>
         </div>
 

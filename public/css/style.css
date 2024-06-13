@@ -145,6 +145,30 @@ textarea::placeholder {
     transform: scale(1.1);
 }
 
+#btnPlanning {
+    background-color: rgb(47, 39, 122);
+    border: 0px solid rgb(47, 39, 122);
+    transition: all 0.2s ease-out;
+}
+
+#btnPlanning:hover {
+    background-color: rgb(53, 208, 132);
+    border: 0px solid rgb(53, 208, 132);
+    transform: scale(1.1);
+}
+
+#btnPlanningNew {
+    background-color: rgb(47, 39, 122);
+    border: 0px solid rgb(47, 39, 122);
+    transition: all 0.2s ease-out;
+}
+
+#btnPlanningNew:hover {
+    background-color: rgb(53, 208, 132);
+    border: 0px solid rgb(53, 208, 132);
+    transform: scale(1.1);
+}
+
 /* Estilos para formularios */
 label {
     font-weight: bold;

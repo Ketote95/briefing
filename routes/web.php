@@ -72,3 +72,19 @@ Route::post('/brief_audiovisual', [App\Http\Controllers\AudiovisualController::c
 
 //Generador de Brief producción audiovisual en PDF
 Route::get('/audiovisual/pdf', [App\Http\Controllers\AudiovisualController::class, 'generatePDF'])->name('pdf_audiovisual');
+
+// Rutas para los briefs de planning digital
+Route::get('/brief_planning', [App\Http\Controllers\PlanningController::class, 'index'])->name('planning_digital');
+Route::get('/brief_planning/{id}', [App\Http\Controllers\PlanningController::class, 'show']);
+Route::post('/brief_planning', [App\Http\Controllers\PlanningController::class, 'store']);
+
+//Generador de Brief planning digital en PDF
+Route::get('/planning/pdf', [App\Http\Controllers\PlanningController::class, 'generatePDF'])->name('pdf_planning_digital');
+
+// Rutas para los briefs de planning digital (nuevo cliente)
+Route::get('/brief_planning_new', [App\Http\Controllers\PlanningNewController::class, 'index'])->name('planning_digital_new');
+Route::get('/brief_planning_new/{id}', [App\Http\Controllers\PlanningNewController::class, 'show']);
+Route::post('/brief_planning_new', [App\Http\Controllers\PlanningNewController::class, 'store']);
+
+//Generador de Brief planning digital en PDF
+Route::get('/planning_new/pdf', [App\Http\Controllers\PlanningNewController::class, 'generatePDF'])->name('pdf_planning_digital_new');

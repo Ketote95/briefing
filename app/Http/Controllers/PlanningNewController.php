@@ -83,7 +83,7 @@ class PlanningNewController extends Controller
         $planning_new->save();
 
         //Envía el correo electrónico como notificación
-        // Mail::to("nquiroga@dosisagency.com")->send(new NuevoFormularioEnviado($request->empresa, 'Brief de Planning Digital (Nuevo cliente)'));
+        Mail::to("nquiroga@dosisagency.com")->send(new NuevoFormularioEnviado($request->empresa, 'Brief de Planning Digital (Nuevo cliente)'));
 
         return redirect('brief_planning_new')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia');
     }

@@ -32,6 +32,12 @@ body {
     font-size: 50px;
 }
 
+.subtitle {
+    color: #2F277A;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 input::placeholder {
     opacity: 0.3 !important;
 }

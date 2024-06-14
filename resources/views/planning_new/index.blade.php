@@ -41,7 +41,7 @@
                 <br>
                 Si llegaste hasta aquí, es porque has decidido depositar tu confianza en nuestro equipo y para nosotros eso representa un gran valor y compromiso de éxito.<br>
                 <br>
-                El propósito de las siguientes preguntas es obtener la mayor cantidad de información referente a tus necesidades; permitiéndonos de esta manera, planificar y realizar una producción audiovisual que capture de manera precisa y creativa la identidad y visión de tu marca.<br>
+                El propósito de las siguientes preguntas es obtener la mayor cantidad de información referente a tus necesidades; permitiéndonos de esta manera, planificar y configurar una campaña publicitaria precisa que permita alcanzar los objetivos que sean planteados.<br>
                 <br>
                 Por tal motivo, es de gran importancia que te tomes el tiempo suficiente para completar cada una de ellas.
             </div>
@@ -146,6 +146,8 @@
 
                 {{-- Sección de preguntas con Textarea --}}
                 {{-- Empresa --}}
+                <h2 class="subtitle">Empresa</h2>
+
                 <div class="mb-3">
                     <label for="descripcion_empresa" class="form-label">1. Describa detalladamente su empresa</label>
                     <textarea maxlength="500" rows="6" class="form-control" id="descripcion_empresa" name="descripcion_empresa" placeholder="Respuesta máxima de 500 caracteres">{{ isset($planning_new->descripcion_empresa)?$planning_new->descripcion_empresa:old('descripcion_empresa') }}</textarea>
@@ -172,6 +174,8 @@
                 </div>
 
                 {{-- Productos y/o servicios --}}
+                <h2 class="subtitle">Productos/servicios</h2>
+
                 <div class="mb-3">
                     <label for="productos_servicios" class="form-label">6.	¿Cuáles son los productos o servicios que deberán ser impulsados a través de la presente campaña?</label>
                     <textarea maxlength="500" rows="6" class="form-control" id="productos_servicios" name="productos_servicios" placeholder="Respuesta máxima de 500 caracteres">{{ isset($planning_new->productos_servicios)?$planning_new->productos_servicios:old('productos_servicios') }}</textarea>
@@ -188,7 +192,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="diferenciadores" class="form-label">9. ¿Cuáles son las características más importantes y diferenciadores que tienen sus productos o servicios que serán impulsados mediante la presente campaña?</label>
+                    <label for="diferenciadores" class="form-label">9. ¿Cuáles son las características más importantes y diferenciadores que tienen los productos o servicios que serán impulsados mediante la presente campaña?</label>
                     <textarea maxlength="500" rows="6" class="form-control" id="diferenciadores" name="diferenciadores" placeholder="Respuesta máxima de 500 caracteres">{{ isset($planning_new->diferenciadores)?$planning_new->diferenciadores:old('diferenciadores') }}</textarea>
                 </div>
 
@@ -198,8 +202,10 @@
                 </div>
 
                 {{-- Público objetivo --}}
+                <h2 class="subtitle">Publico objetivo</h2>
+
                 <div class="mb-3">
-                    <label for="tipos_clientes" class="form-label">11. Describa lo más detallado posible a sus diferentes tipos de clientes.</label><span> (Nivel socioeconómico, profesión, ciclo de vida familiar, ingresos mensuales, etc.)</span>
+                    <label for="tipos_clientes" class="form-label">11. Describa lo más detallado posible a sus diferentes tipos de clientes.</label><span> (Nivel socioeconómico, profesión, ciclo de vida familiar, ingresos mensuales, etc.) (Especifique todos los perfiles)</span>
                     <textarea maxlength="500" rows="6" class="form-control" id="tipos_clientes" name="tipos_clientes" placeholder="Respuesta máxima de 500 caracteres">{{ isset($planning_new->tipos_clientes)?$planning_new->tipos_clientes:old('tipos_clientes') }}</textarea>
                 </div>
 
@@ -210,7 +216,7 @@
 
                 <div class="mb-3">
                     <label for="zonas_geograficas" class="form-label">13. ¿A qué zonas geográficas deberíamos llegar mediante la presente campaña?</label><span> Especifique el porcentaje de esfuerzos que le asignaría a cada región</span>
-                    <textarea maxlength="500" rows="6" class="form-control" id="zonas_geograficas" name="zonas_geograficas" placeholder="Bolivia 70%, Chile 30%">{{ isset($planning_new->zonas_geograficas)?$planning_new->zonas_geograficas:old('zonas_geograficas') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="zonas_geograficas" name="zonas_geograficas" placeholder="Respuesta máxima de 500 caracteres">{{ isset($planning_new->zonas_geograficas)?$planning_new->zonas_geograficas:old('zonas_geograficas') }}</textarea>
                 </div>
 
                 <div class="mb-3">
@@ -224,6 +230,8 @@
                 </div>
 
                 {{-- Objetivos de la campaña --}}
+                <h2 class="subtitle">Objetivos de la campaña</h2>
+
                 <div class="mb-3">
                     <label for="objetivo_principal" class="form-label">16. ¿Cuál es su objetivo principal para esta campaña?</label><span> (Ej: Generar leads, reconocimiento de marca, tráfico web, ventas, etc.)</span>
                     <textarea maxlength="500" rows="6" class="form-control" id="objetivo_principal" name="objetivo_principal" placeholder="Respuesta máxima de 500 caracteres">{{ isset($planning_new->objetivo_principal)?$planning_new->objetivo_principal:old('objetivo_principal') }}</textarea>
@@ -248,6 +256,9 @@
                     <label for="preferencias_formato" class="form-label">20. ¿Tiene alguna preferencia de los formatos de anuncios que deban aplicarse para la presente campaña?</label><span> (Ej. Videos, Fotografía de productos, anuncios de texto, etc.)</span>
                     <input type="text" name="preferencias_formato" id="preferencias_formato" class="form-control" placeholder="Formatos separadaos por comas" value="{{ isset($planning_new->preferencias_formato)?$planning_new->preferencias_formato:old('preferencias_formato') }}">
                 </div>
+
+                {{-- Indicadores de éxito, objetivos cuantitativos y presupuesto --}}
+                <h2 class="subtitle">Indicadores de éxito objetivos cuantitativos y presupuesto</h2>
 
                 <div class="mb-3">
                     <label for="metricas_clave" class="form-label">21. ¿Cuáles serán las métricas clave que se utilizarán para medir el éxito de la campaña?</label><span> (Ej. CTR, Ventas, Conversion Rate, CPA, CPL, Alcance, etc.)</span>
@@ -276,6 +287,9 @@
                     <input type="text" name="canales" id="canales" class="form-control" placeholder="Canales separados por comas" value="{{ isset($planning_new->canales)?$planning_new->canales:old('canales') }}">
                 </div>
 
+                {{-- Consideraciones adicionales --}}
+                <h2 class="subtitle">Consideraciones adicionales</h2>
+                
                 <div class="mb-3">
                     <label for="restriccion" class="form-label">26. ¿Cuenta con alguna restricción que deba considerarse para la presente campaña?</label><span> (Legales, comunicacionales, presupuestarias, etc.)</span>
                     <textarea maxlength="500" rows="6" class="form-control" id="restriccion" name="restriccion" placeholder="Respuesta máxima de 500 caracteres">{{ isset($planning_new->restriccion)?$planning_new->restriccion:old('restriccion') }}</textarea>

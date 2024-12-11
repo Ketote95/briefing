@@ -28,12 +28,12 @@
                 </div>
             </div>  
 
-            <div style="text-align: justify" class="alert alert-light mx-5 mb-2 justify-content" role="alert">
+            <div style="text-align: justify" class="alert alert-light mx-5 mb-2" role="alert">
                 Estimado partner: <br>
                 <br>
                 Si llegaste hasta aquí, es porque has decidido depositar tu confianza en nuestro equipo y para nosotros eso representa un gran valor y compromiso de éxito.<br>
                 <br>
-                El propósito de las siguientes preguntas es obtener la mayor cantidad de información referente a tus necesidades; permitiéndonos de esta manera, planificar y realizar una producción fotográfica que capture de manera precisa y creativa la identidad y visión de tu marca.<br>
+                El propósito de las siguientes preguntas es obtener la mayor cantidad de información referente a tu empresa; ayudándonos a comprender su situación actual, fortalezas, oportunidades, objetivos y desventajas; permitiéndonos de esta manera, articular estrategias de comunicación que aporten valor y crecimiento.<br>
                 <br>
                 Por tal motivo, es de gran importancia que te tomes el tiempo suficiente para completar cada una de ellas.
             </div>

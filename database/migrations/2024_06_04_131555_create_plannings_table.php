@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('plannings', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->boolean('estado')->default(0);
             $table->string('empresa', 100);
             $table->string('tipo_brief', 50)->default("Planning digital");
             $table->string('categoria', 100);

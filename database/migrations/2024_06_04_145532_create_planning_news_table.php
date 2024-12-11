@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('planning_news', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->boolean('estado')->default(0);
             $table->string('empresa', 100);
-            $table->string('tipo_brief', 50)->default("Planning digital");
+            $table->string('tipo_brief', 50)->default("Planning digital nuevo");
             $table->string('categoria', 100);
             $table->string('marca', 100);
             $table->string('sitio_web', 100)->nullable();

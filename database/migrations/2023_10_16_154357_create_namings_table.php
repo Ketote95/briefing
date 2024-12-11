@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('namings', function (Blueprint $table) {
             $table->id();
+            $table->boolean('estado')->default(0);
             $table->string("empresa", 100);
             $table->string("tipo_brief", 50)->default("Naming");
             $table->string("rubro", 100);

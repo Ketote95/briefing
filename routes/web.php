@@ -88,3 +88,11 @@ Route::post('/brief_planning_new', [App\Http\Controllers\PlanningNewController::
 
 //Generador de Brief planning digital en PDF
 Route::get('/planning_new/pdf', [App\Http\Controllers\PlanningNewController::class, 'generatePDF'])->name('pdf_planning_digital_new');
+
+// Rutas para los briefs de campaña online
+Route::get('/brief_campaña_online', [App\Http\Controllers\OnlineCampaignController::class, 'index'])->name('planning_digital_new');
+Route::get('/brief_campaña_online/{id}', [App\Http\Controllers\OnlineCampaignController::class, 'show']);
+Route::post('/brief_campaña_online', [App\Http\Controllers\OnlineCampaignController::class, 'store']);
+
+//Generador de Brief campaña online en PDF
+Route::get('/campaña_online/pdf', [App\Http\Controllers\OnlineCampaignController::class, 'generatePDF'])->name('pdf_planning_digital_new');

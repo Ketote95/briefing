@@ -37,6 +37,7 @@
                 <a href="{{ url('brief_audiovisual') }}" id="btnAudiovisual" class="btn btn-primary mt-2">Producción audiovisual</a>
                 <a href="{{ url('brief_planning') }}" id="btnPlanning" class="btn btn-primary mt-2">Planning digital</a>
                 <a href="{{ url('brief_planning_new') }}" id="btnPlanningNew" class="btn btn-primary mt-2">Planning digital nuevo cliente</a>
+                <a href="{{ url('brief_pauta_cerrada') }}" id="btnPublicitario" class="btn btn-primary mt-2">Evaluación de costos de pauta</a>
             </div>
         </div>
 

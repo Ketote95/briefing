@@ -117,7 +117,7 @@ class PautasController extends Controller
         $pautas->save();
 
         //Envía el correo electrónico como notificación
-        Mail::to('nquiroga@dosisagency.com')->send(new NuevoFormularioEnviado($request->empresa, 'Brief Publicitario'));
+        Mail::to('nquiroga@dosisagency.com')->send(new NuevoFormularioEnviado($request->empresa, 'Brief de Pauta Cerrada'));
 
         return redirect('brief_pauta_cerrada')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia.');
     }
@@ -138,7 +138,7 @@ class PautasController extends Controller
         ];
         $fecha = $elArray['data']['created_at'];
         $pdf = PDF::loadView('pautas/briefPDF', $elArray);
-        return $pdf->download('brief_pautas [' . $elArray['data']['empresa'] . '] ' . $fecha . '.pdf');
+        return $pdf->download('brief_pauta_cerrada [' . $elArray['data']['empresa'] . '] ' . $fecha . '.pdf');
     }
 
     /**

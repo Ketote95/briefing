@@ -104,9 +104,6 @@ class PautasController extends Controller
         if ($pautas->formatos_campaña === "") {
             $pautas->formatos_campaña = null;
         }
-        $pautas->indicadores_exito = $request->indicadores_exito;
-        $pautas->resultados_positivos = $request->resultados_positivos;
-        $pautas->resultados_inmediatos = $request->resultados_inmediatos;
         $pautas->restricciones = $request->restricciones;
         $pautas->vinculacion_campaña = $request->vinculacion_campaña;
         $pautas->condiciones_externas = $request->condiciones_externas;
@@ -115,13 +112,14 @@ class PautasController extends Controller
         $pautas->tono_preferido = $request->tono_preferido;
         $pautas->indicadores_kpis = $request->indicadores_kpis;
         $pautas->resultados_concretos = $request->resultados_concretos;
+        $pautas->info_adicional = $request->info_adicional;
 
         $pautas->save();
 
         //Envía el correo electrónico como notificación
-        // Mail::to('nquiroga@dosisagency.com')->send(new NuevoFormularioEnviado($request->empresa, 'Brief Publicitario'));
+        Mail::to('nquiroga@dosisagency.com')->send(new NuevoFormularioEnviado($request->empresa, 'Brief Publicitario'));
 
-        return redirect('brief_publicitario')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia.');
+        return redirect('brief_pauta_cerrada')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia.');
     }
 
     /**

@@ -51,9 +51,6 @@ return new class extends Migration
             $table->string('recursos_creativos');
             $table->string('desarrollar_materiales');
             $table->string('formatos_campaña');
-            $table->string('indicadores_exito');
-            $table->string('resultados_positivos');
-            $table->string('resultados_inmediatos');
             $table->string('restricciones');
             $table->string('vinculacion_campaña');
             $table->string('condiciones_externas');
@@ -62,6 +59,7 @@ return new class extends Migration
             $table->string('tono_preferido');
             $table->string('indicadores_kpis');
             $table->string('resultados_concretos');
+            $table->text('info_adicional')->nullable();
             $table->timestamps();
         });
     }

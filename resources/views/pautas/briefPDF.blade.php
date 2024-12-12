@@ -242,7 +242,7 @@
 
                 @isset($data['intereses_específicos'])
                     <tr>
-                        <td><li><span>¿Cuáles son los interes específicos del segmento?</span></li></td>
+                        <td><li><span>¿Cuáles son los intereses específicos del segmento?</span></li></td>
                     </tr>
                     <tr>
                         <td>{{$data['intereses_específicos']}}</td>
@@ -269,7 +269,7 @@
 
                 @isset($data['bases_datos'])
                     <tr>
-                        <td><li><span>¿Cuentas con bases de datos propias?</span></li></td>
+                        <td><li><span>¿Cuentan con bases de datos propias?</span></li></td>
                     </tr>
                     <tr>
                         <td>{{$data['bases_datos']}}</td>
@@ -346,7 +346,7 @@
 
                 @isset($data['competidores_directos'])
                     <tr>
-                        <td><li><span>¿Quienes son sus competidores directos?</span></li></td>
+                        <td><li><span>¿Quiénes son sus competidores directos?</span></li></td>
                     </tr>
                     <tr>
                         <td>{{$data['competidores_directos']}}</td>
@@ -355,7 +355,7 @@
 
                 @isset($data['competidores_indirectos'])
                     <tr>
-                        <td><li><span>¿Quienes son sus competidores indirectos?</span></li></td>
+                        <td><li><span>¿Quiénes son sus competidores indirectos?</span></li></td>
                     </tr>
                     <tr>
                         <td>{{$data['competidores_indirectos']}}</td>
@@ -438,40 +438,6 @@
                     </tr>
                     <tr>
                         <td>{{$data['formatos_campaña']}}</td>
-                    </tr>                    
-                @endisset
-            </tbody>
-        </table>
-
-        {{-- Las preguntas de expectativas del cliente --}}
-        <p class="titulos" style="margin-top: 30px; color: #2F277A"> EXPECTATIVAS DEL CLIENTE</p>
-        
-        <table style="font-size: 15px" class="table table-dark table-striped">
-            <tbody>
-                @isset($data['indicadores_exito'])
-                    <tr>
-                        <td><li><span>¿Qué indicadores definirán el éxito de la campaña?</span></li></td>
-                    </tr>
-                    <tr>
-                        <td>{{$data['indicadores_exito']}}</td>
-                    </tr>                    
-                @endisset
-
-                @isset($data['resultados_positivos'])
-                    <tr>
-                        <td><li><span>¿Qué resultados considerarían positivos?</span></li></td>
-                    </tr>
-                    <tr>
-                        <td>{{$data['resultados_positivos']}}</td>
-                    </tr>                    
-                @endisset
-
-                @isset($data['resultados_inmediatos'])
-                    <tr>
-                        <td><li><span>¿Esperan resultados inmediatos o están dispuestos a invertir a mediano/largo plazo?</span></li></td>
-                    </tr>
-                    <tr>
-                        <td>{{$data['resultados_inmediatos']}}</td>
                     </tr>                    
                 @endisset
             </tbody>
@@ -565,6 +531,15 @@
                     </tr>
                     <tr>
                         <td>{{$data['resultados_concretos']}}</td>
+                    </tr>                    
+                @endisset
+                
+                @isset($data['info_adicional'])
+                    <tr>
+                        <td><li><span>Información adicional</span></li></td>
+                    </tr>
+                    <tr>
+                        <td>{{$data['info_adicional']}}</td>
                     </tr>                    
                 @endisset
             </tbody>

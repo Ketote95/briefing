@@ -8,6 +8,9 @@
 
         {{-- Bootstrap 5 styles --}}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        
+        {{-- Fontawesome 6 styles --}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{asset('css/style.css')}}">
@@ -32,7 +35,7 @@
         <div class="contenedor-formulario mt-5 pt-5 pb-5">
             <div class="row justify-content-md-center">
                 <div class="col col-lg col-md-6 col-sm-12">
-                    <h1 class="text-center title-brief" >Brief publicitario para evaluación de costos de pauta</h1>
+                    <h1 class="text-center title-brief" >Brief Publicitario para<br>Evaluación de Costos de Pauta</h1>
                 </div>
             </div>  
 
@@ -41,7 +44,7 @@
                 <br>
                 Si llegaste hasta aquí, es porque has decidido depositar tu confianza en nuestro equipo y para nosotros eso representa un gran valor y compromiso de éxito.<br>
                 <br>
-                El propósito de las siguientes preguntas es obtener la mayor cantidad de información referente a tus necesidades; permitiéndonos de esta manera, planificar y realizar una producción audiovisual que capture de manera precisa y creativa la identidad y visión de tu marca.<br>
+                El propósito de las siguientes preguntas es obtener la mayor cantidad de información referente a tu marca, objetivos y necesidades; permitiéndonos de esta manera, planificar y articular acciones que generen resultados.<br>
                 <br>
                 Por tal motivo, es de gran importancia que te tomes el tiempo suficiente para completar cada una de ellas.
             </div>
@@ -69,7 +72,7 @@
                 </div>
             @endif
 
-            <form action="{{url('brief_publicitario')}}" method="POST" class="p-5">
+            <form action="{{url('brief_pauta_cerrada')}}" method="POST" class="p-5">
                 {{-- Campos de información general --}}
                 @csrf
                 <div class="row">
@@ -275,13 +278,13 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="intereses_especificos" class="form-label">¿Cuáles son los interes específicos del segmento?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="intereses_especificos" name="intereses_especificos" placeholder="(Ej. Historia, servicios, trayectoria, productos, equipo de trabajo, valores, etc.)">{{ isset($pautas->intereses_especificos)?$pautas->intereses_especificos:old('intereses_especificos') }}</textarea>
+                    <label for="intereses_especificos" class="form-label">¿Cuáles son los intereses específicos del segmento?</label>
+                    <textarea maxlength="500" rows="6" class="form-control" id="intereses_especificos" name="intereses_especificos" placeholder="Hábitos, costumbres, preferencias, ciclo de vida, gustos, etc.">{{ isset($pautas->intereses_especificos)?$pautas->intereses_especificos:old('intereses_especificos') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="comportamiento_compra" class="form-label">¿Cuál es el comportamiento de compra del segmento?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="comportamiento_compra" name="comportamiento_compra" placeholder="Respuesta máxima de 500 caracteres">{{ isset($pautas->comportamiento_compra)?$pautas->comportamiento_compra:old('comportamiento_compra') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="comportamiento_compra" name="comportamiento_compra" placeholder="Defina cómo adquiere sus productos o servicios.">{{ isset($pautas->comportamiento_compra)?$pautas->comportamiento_compra:old('comportamiento_compra') }}</textarea>
                 </div>
 
                 <div class="mb-3">
@@ -291,7 +294,7 @@
 
                 {{-- Bases de datos propias --}}
                 <div class="mb-3">
-                    <label for="bases_datos" class="form-label">¿Cuentas con bases de datos propias?</label><span> (CRM, ERP, emails, etc.)</span>
+                    <label for="bases_datos" class="form-label">¿Cuentan con bases de datos propias?</label><span> (CRM, ERP, emails, etc.)</span>
                     <div class="col-lg-1">
                         <select name="bases_datos" id="bases_datos" class="form-select">
                             <option value="Si">Si</option>
@@ -415,37 +418,37 @@
 
                 <div class="mb-3">
                     <label for="ciclo_compra" class="form-label">¿Es una compra inmediata, por impulso o requiere investigación previa?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="ciclo_compra" name="ciclo_compra" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->ciclo_compra)?$pautas->ciclo_compra:old('ciclo_compra') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="ciclo_compra" name="ciclo_compra" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->ciclo_compra)?$pautas->ciclo_compra:old('ciclo_compra') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="habito_compra" class="form-label">¿Es compra única o rutinaria? Especifique el ciclo y hábito de compra</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="habito_compra" name="habito_compra" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->habito_compra)?$pautas->habito_compra:old('habito_compra') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="habito_compra" name="habito_compra" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->habito_compra)?$pautas->habito_compra:old('habito_compra') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="cambios_recientes" class="form-label">¿Qué cambios recientes están afectando la industria?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="cambios_recientes" name="cambios_recientes" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->cambios_recientes)?$pautas->cambios_recientes:old('cambios_recientes') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="cambios_recientes" name="cambios_recientes" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->cambios_recientes)?$pautas->cambios_recientes:old('cambios_recientes') }}</textarea>
                 </div>
 
                 <div class="mb-3">
-                    <label for="competidores_directos" class="form-label">¿Quienes son sus competidores directos?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="competidores_directos" name="competidores_directos" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->competidores_directos)?$pautas->competidores_directos:old('competidores_directos') }}</textarea>
+                    <label for="competidores_directos" class="form-label">¿Quiénes son sus competidores directos?</label>
+                    <textarea maxlength="500" rows="6" class="form-control" id="competidores_directos" name="competidores_directos" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->competidores_directos)?$pautas->competidores_directos:old('competidores_directos') }}</textarea>
                 </div>
                 
                 <div class="mb-3">
-                    <label for="competidores_indirectos" class="form-label">¿Quienes son sus competidores indirectos?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="competidores_indirectos" name="competidores_indirectos" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->competidores_indirectos)?$pautas->competidores_indirectos:old('competidores_indirectos') }}</textarea>
+                    <label for="competidores_indirectos" class="form-label">¿Quiénes son sus competidores indirectos?</label>
+                    <textarea maxlength="500" rows="6" class="form-control" id="competidores_indirectos" name="competidores_indirectos" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->competidores_indirectos)?$pautas->competidores_indirectos:old('competidores_indirectos') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="alta_baja_competencia" class="form-label">¿Es una industria de alta o baja competencia en plataformas digitales?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="alta_baja_competencia" name="alta_baja_competencia" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->alta_baja_competencia)?$pautas->alta_baja_competencia:old('alta_baja_competencia') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="alta_baja_competencia" name="alta_baja_competencia" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->alta_baja_competencia)?$pautas->alta_baja_competencia:old('alta_baja_competencia') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="temporada_clave" class="form-label">¿La campaña coincide con una temporada clave?</label><span> (Black Friday, Navidad, etc.)</span>
-                    <textarea maxlength="500" rows="6" class="form-control" id="temporada_clave" name="temporada_clave" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->temporada_clave)?$pautas->temporada_clave:old('temporada_clave') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="temporada_clave" name="temporada_clave" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->temporada_clave)?$pautas->temporada_clave:old('temporada_clave') }}</textarea>
                 </div>
 
                 {{-- Presupuesto y recursos --}}
@@ -484,7 +487,7 @@
 
                 <div class="mb-3">
                     <label for="distribucion_presupuesto" class="form-label">En caso de ser requerido distribuir el presupuesto en diferentes plataformas, ¿Cuáles serían estas?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="distribucion_presupuesto" name="distribucion_presupuesto" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->distribucion_presupuesto)?$pautas->distribucion_presupuesto:old('distribucion_presupuesto') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="distribucion_presupuesto" name="distribucion_presupuesto" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->distribucion_presupuesto)?$pautas->distribucion_presupuesto:old('distribucion_presupuesto') }}</textarea>
                 </div>
 
                 {{-- Recursos creativos --}}
@@ -547,40 +550,22 @@
                     </div>
                 </div>
 
-                {{-- Expectativas del cliente --}}
-                <h2 class="subtitle">Expectativas del cliente</h2>
-
-                <div class="mb-3">
-                    <label for="indicadores_exito" class="form-label">¿Qué indicadores definirán el éxito de la campaña?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="indicadores_exito" name="indicadores_exito" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->indicadores_exito)?$pautas->indicadores_exito:old('indicadores_exito') }}</textarea>
-                </div>
-
-                <div class="mb-3">
-                    <label for="resultados_positivos" class="form-label">¿Qué resultados considerarían positivos?</label><span> (Ejemplo: X cantidad de visitas, X cantidad de personas impactadas)</span>
-                    <textarea maxlength="500" rows="6" class="form-control" id="resultados_positivos" name="resultados_positivos" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->resultados_positivos)?$pautas->resultados_positivos:old('resultados_positivos') }}</textarea>
-                </div>
-
-                <div class="mb-3">
-                    <label for="resultados_inmediatos" class="form-label">¿Esperan resultados inmediatos o están dispuestos a invertir a mediano/largo plazo?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="resultados_inmediatos" name="resultados_inmediatos" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->resultados_inmediatos)?$pautas->resultados_inmediatos:old('resultados_inmediatos') }}</textarea>
-                </div>
-
                 {{-- Factores externos --}}
                 <h2 class="subtitle">Factores externos</h2>
 
                 <div class="mb-3">
                     <label for="restricciones" class="form-label">¿Existen restricciones en la publicidad de la industria?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="restricciones" name="restricciones" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->restricciones)?$pautas->restricciones:old('restricciones') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="restricciones" name="restricciones" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->restricciones)?$pautas->restricciones:old('restricciones') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="vinculacion_campaña" class="form-label">¿La campaña está vinculada a un evento, lanzamiento o fecha importante?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="vinculacion_campaña" name="vinculacion_campaña" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->vinculacion_campaña)?$pautas->vinculacion_campaña:old('vinculacion_campaña') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="vinculacion_campaña" name="vinculacion_campaña" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->vinculacion_campaña)?$pautas->vinculacion_campaña:old('vinculacion_campaña') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="condiciones_externas" class="form-label">¿Hay condiciones externas (inflación, crisis, etc.) que puedan influir en el comportamiento del consumidor?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="condiciones_externas" name="condiciones_externas" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->condiciones_externas)?$pautas->condiciones_externas:old('condiciones_externas') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="condiciones_externas" name="condiciones_externas" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->condiciones_externas)?$pautas->condiciones_externas:old('condiciones_externas') }}</textarea>
                 </div>
 
                 {{-- Propuesta de valor de marca --}}
@@ -588,17 +573,17 @@
 
                 <div class="mb-3">
                     <label for="producto_unico" class="form-label">¿Qué hace único a su producto?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="producto_unico" name="producto_unico" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->producto_unico)?$pautas->producto_unico:old('producto_unico') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="producto_unico" name="producto_unico" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->producto_unico)?$pautas->producto_unico:old('producto_unico') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="mensaje_principal" class="form-label">¿Cuál es el mensaje principal que quieren transmitir?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="mensaje_principal" name="mensaje_principal" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->mensaje_principal)?$pautas->mensaje_principal:old('mensaje_principal') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="mensaje_principal" name="mensaje_principal" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->mensaje_principal)?$pautas->mensaje_principal:old('mensaje_principal') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="tono_preferido" class="form-label">¿Cuál es el tono preferido?</label><span> (formal, emocional, humorístico)</span>
-                    <textarea maxlength="500" rows="6" class="form-control" id="tono_preferido" name="tono_preferido" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->tono_preferido)?$pautas->tono_preferido:old('tono_preferido') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="tono_preferido" name="tono_preferido" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->tono_preferido)?$pautas->tono_preferido:old('tono_preferido') }}</textarea>
                 </div>
 
                 {{-- Criterios de evaluación --}}
@@ -606,12 +591,17 @@
 
                 <div class="mb-3">
                     <label for="indicadores_kpis" class="form-label">¿Qué indicadores (KPIS) se determinarán para evaluar el éxito de la campaña?</label>
-                    <textarea maxlength="500" rows="6" class="form-control" id="indicadores_kpis" name="indicadores_kpis" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->indicadores_kpis)?$pautas->indicadores_kpis:old('indicadores_kpis') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="indicadores_kpis" name="indicadores_kpis" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->indicadores_kpis)?$pautas->indicadores_kpis:old('indicadores_kpis') }}</textarea>
                 </div>
 
                 <div class="mb-3">
                     <label for="resultados_concretos" class="form-label">¿Qué resultados concretos les gustaría alcanzar al finalizar la campaña?</label><span> (Ejemplo: X cantidad de visitas, X cantidad de personas impactadas)</span>
-                    <textarea maxlength="500" rows="6" class="form-control" id="resultados_concretos" name="resultados_concretos" placeholder="Proporcione enlaces o descripciones">{{ isset($pautas->resultados_concretos)?$pautas->resultados_concretos:old('resultados_concretos') }}</textarea>
+                    <textarea maxlength="500" rows="6" class="form-control" id="resultados_concretos" name="resultados_concretos" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->resultados_concretos)?$pautas->resultados_concretos:old('resultados_concretos') }}</textarea>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="info_adicional" class="form-label">Información adicional</label>
+                    <textarea maxlength="500" rows="6" class="form-control" id="info_adicional" name="info_adicional" placeholder="Respuesta Máxima de 500 caracteres">{{ isset($pautas->info_adicional)?$pautas->info_adicional:old('info_adicional') }}</textarea>
                 </div>
 
                 <button id="btnAudiovisual" type="submit" class="btn btn-primary">Enviar Brief</button>

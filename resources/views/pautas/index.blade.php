@@ -318,12 +318,12 @@
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="otros_plataformas" name="plataformas[]" value="">
+                        <input class="form-check-input" type="checkbox" id="otras_plataformas" name="plataformas[]" value="">
                         <label for="otras_plataformas" class="form-check-label">Otros</label>
                     </div>
 
                     <div id="text_otras_plataformas" class="col-lg-4" style="display: none;">
-                        <input id="input_otras_plataformas" type="text" class="form-control" name="" placeholder="Especifique los canales">
+                        <input id="input_otras_plataformas" type="text" class="form-control" name="" placeholder="Especificar las plataformas">
                     </div>
                 </div>
 
@@ -382,7 +382,7 @@
                     </div>
 
                     <div id="text_otras_plataformas_mejores" class="col-lg-4" style="display: none;">
-                        <input id="input_otras_plataformas_mejores" type="text" class="form-control" name="" placeholder="Especifique los canales">
+                        <input id="input_otras_plataformas_mejores" type="text" class="form-control" name="" placeholder="Especificar las plataformas">
                     </div>
                 </div>
 
@@ -447,14 +447,14 @@
                 <div class="mb-3">
                     <label for="fecha_inicio" class="form-label">Fecha de inicio <span style="color: red;">*</span></label>
                     <div class="col-lg-3">
-                        <input type="date" min="{{ date('Y-m-d') }}" name="fecha_inicio" id="fecha_inicio" class="form-control" required>
+                        <input type="date" min="{{ date('Y-m-d') }}" name="fecha_inicio" id="fecha_inicio" class="form-control" data-toggle="tooltip" data-placement="bottom" title="En caso de no tener fechas definidas, puede colocar plazos tentativos o fechas ficticias" required>
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="fecha_fin" class="form-label">Fecha de fin <span style="color: red;">*</span></label>
                     <div class="col-lg-3">
-                        <input type="date" min="{{ date('Y-m-d') }}" name="fecha_fin" id="fecha_fin" class="form-control" required>
+                        <input type="date" min="{{ date('Y-m-d') }}" name="fecha_fin" id="fecha_fin" class="form-control" data-toggle="tooltip" data-placement="bottom" title="En caso de no tener fechas definidas, puede colocar plazos tentativos o fechas ficticias" required>
                     </div>
                 </div>
 
@@ -519,7 +519,7 @@
                     </div>
 
                     <div id="text_otros_formatos_campaña" class="col-lg-4" style="display: none;">
-                        <input id="input_otros_formatos_campaña" type="text" class="form-control" name="" placeholder="Especifique los canales">
+                        <input id="input_otros_formatos_campaña" type="text" class="form-control" name="" placeholder="Especificar los formatos">
                     </div>
                 </div>
 
@@ -630,78 +630,43 @@
             }
             //Fin de To Top
 
-            // Mostrar input text para los radiobutton
-            $("input[type='radio']").on("change", function(){
-                // Para el tipo de video
-                if($('#otro').is(':checked')){
-                    $("#otro_tipo_video").slideDown();
-                    $('#input_otro_video').attr('name', 'tipo_video');
-                } else {
-                    $("#otro_tipo_video").slideUp();
-                    $('#input_otro_video').attr('name', '');
-                }
-                // Para la duración de los videos
-                if($('#otra_duracion').is(':checked')){
-                    $("#text_otra_duracion").slideDown();
-                    $('#input_otra_duracion').attr('name', 'duracion_videos');
-                } else {
-                    $("#text_otra_duracion").slideUp();
-                    $('#input_otra_duracion').attr('name', '');
-                }
-            });
-
-            // Mostrar input text para los chackboxes
+            // Mostrar input text para los checkboxes
             $("input[type='checkbox']").on("change", function(){
-                // Para el tipo de tono de voz deseado
-                if($('#otro_tono').is(':checked')){
-                    $("#otro_tono_deseado").slideDown();
+                // Para las plataformas digitales elegidas
+                if($('#otras_plataformas').is(':checked')){
+                    $("#text_otras_plataformas").slideDown();
                 } else {
-                    $("#otro_tono_deseado").slideUp();
+                    $("#text_otras_plataformas").slideUp();
                 }
-                $("#input_otro_tono").change(function(){
-                    $("#otro_tono").val($(this).val());
+                $("#input_otras_plataformas").change(function(){
+                    $("#otras_plataformas").val($(this).val());
                 });
 
-                // Para los canales de distribución de video
-                if($('#otros_canales').is(':checked')){
-                    $("#text_otros_canales").slideDown();
+                // Para las plataformas que han dado mejores resultados
+                if($('#otras_plataformas_mejores').is(':checked')){
+                    $("#text_otras_plataformas_mejores").slideDown();
                 } else {
-                    $("#text_otros_canales").slideUp();
+                    $("#text_otras_plataformas_mejores").slideUp();
                 }
-                $("#input_otros_canales").change(function(){
-                    $("#otros_canales").val($(this).val());
+                $("#input_otras_plataformas_mejores").change(function(){
+                    $("#otras_plataformas_mejores").val($(this).val());
                 });
 
-                // Para las otras dimensiones de video
-                if($('#otras_dimensiones').is(':checked')){
-                    $("#text_otras_dimensiones").slideDown();
+                // Para los otros formatos de la campaña
+                if($('#otros_formatos_campaña').is(':checked')){
+                    $("#text_otros_formatos_campaña").slideDown();
                 } else {
-                    $("#text_otras_dimensiones").slideUp();
+                    $("#text_otros_formatos_campaña").slideUp();
                 }
-                $("#input_otras_dimensiones").change(function(){
-                    $("#otras_dimensiones").val($(this).val());
-                });
-                
-                // Para los otros formatos de sonido y musicalización
-                if($('#otros_formatos').is(':checked')){
-                    $("#text_otros_formatos").slideDown();
-                } else {
-                    $("#text_otros_formatos").slideUp();
-                }
-                $("#input_otros_formatos").change(function(){
-                    $("#otros_formatos").val($(this).val());
-                });
-
-                // Para los actores
-                if($('#otros_actores').is(':checked')){
-                    $("#text_otros_actores").slideDown();
-                } else {
-                    $("#text_otros_actores").slideUp();
-                }
-                $("#input_otros_actores").change(function(){
-                    $("#otros_actores").val($(this).val());
+                $("#input_otros_formatos_campaña").change(function(){
+                    $("#otros_formatos_campaña").val($(this).val());
                 });
             });
+
+            // Habilitación de todos los tooltips en la página
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
         </script>        
     </body>
 </html>

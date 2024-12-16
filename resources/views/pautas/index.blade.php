@@ -445,16 +445,16 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="fecha_inicio" class="form-label">Fecha de inicio <span style="color: red;">*</span></label>
+                    <label for="fecha_inicio" class="form-label">Fecha de inicio <span style="color: red;">* Campo obligatorio. En caso de no tener fecha definidas, puede colocar plazos tentativos o fechas ficticias</span></label>
                     <div class="col-lg-3">
-                        <input type="date" min="{{ date('Y-m-d') }}" name="fecha_inicio" id="fecha_inicio" class="form-control" data-toggle="tooltip" data-placement="bottom" title="En caso de no tener fechas definidas, puede colocar plazos tentativos o fechas ficticias" required>
+                        <input type="date" min="{{ date('Y-m-d') }}" name="fecha_inicio" id="fecha_inicio" class="form-control" title="En caso de no tener fechas definidas, puede colocar plazos tentativos o fechas ficticias" required>
                     </div>
                 </div>
 
                 <div class="mb-3">
-                    <label for="fecha_fin" class="form-label">Fecha de fin <span style="color: red;">*</span></label>
+                    <label for="fecha_fin" class="form-label">Fecha de fin <span style="color: red;">* Campo obligatorio. En caso de no tener fecha definidas, puede colocar plazos tentativos o fechas ficticias</span></label>
                     <div class="col-lg-3">
-                        <input type="date" min="{{ date('Y-m-d') }}" name="fecha_fin" id="fecha_fin" class="form-control" data-toggle="tooltip" data-placement="bottom" title="En caso de no tener fechas definidas, puede colocar plazos tentativos o fechas ficticias" required>
+                        <input type="date" min="{{ date('Y-m-d') }}" name="fecha_fin" id="fecha_fin" class="form-control" title="En caso de no tener fechas definidas, puede colocar plazos tentativos o fechas ficticias" required>
                     </div>
                 </div>
 
@@ -662,11 +662,6 @@
                     $("#otros_formatos_campaña").val($(this).val());
                 });
             });
-
-            // Habilitación de todos los tooltips en la página
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip()
-            })
         </script>        
     </body>
 </html>

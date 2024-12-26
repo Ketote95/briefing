@@ -5,7 +5,7 @@
     <title>Briefing</title>
 
     {{-- Bootstrap 5 styles --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     {{-- Fontawesome 6 styles --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,6 +24,22 @@
         input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
+        }
+
+        .form-section {
+            display: none;
+        }
+
+        .form-section.current {
+            display: block;
+        }
+
+        .parsley-errors-list {
+            color: red;
+        }
+
+        .active {
+            background-color: #35D084 !important;
         }
     </style>        
 </head>

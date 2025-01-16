@@ -97,10 +97,10 @@ Route::post('/brief_campaña_online', [App\Http\Controllers\OnlineCampaignContro
 //Generador de Brief campaña online en PDF
 Route::get('/campaña_online/pdf', [App\Http\Controllers\OnlineCampaignController::class, 'generatePDF'])->name('pdf_campaña_online');
 
-// Rutas para los briefs publicitarios
-Route::get('/brief_pauta_cerrada', [App\Http\Controllers\PautasController::class, 'index'])->name('publicatario');
-Route::get('/brief_pauta_cerrada/{id}', [App\Http\Controllers\PautasController::class, 'show']);
-Route::post('/brief_pauta_cerrada', [App\Http\Controllers\PautasController::class, 'store']);
+// Rutas para los briefs de pautas
+Route::get('/brief_pauta_objetivos', [App\Http\Controllers\PautasController::class, 'index'])->name('pauta');
+Route::get('/brief_pauta_objetivos/{id}', [App\Http\Controllers\PautasController::class, 'show']);
+Route::post('/brief_pauta_objetivos', [App\Http\Controllers\PautasController::class, 'store']);
 
-//Generador de Brief publicitarios en PDF
-Route::get('/publicitario/pdf', [App\Http\Controllers\PautasController::class, 'generatePDF'])->name('pdf_publicatario');
+//Generador de Brief de pautas en PDF
+Route::get('/pauta/pdf', [App\Http\Controllers\PautasController::class, 'generatePDF'])->name('pdf_pauta');

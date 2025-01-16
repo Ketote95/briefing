@@ -117,9 +117,9 @@ class PautasController extends Controller
         $pautas->save();
 
         //Envía el correo electrónico como notificación
-        Mail::to('nquiroga@dosisagency.com')->send(new NuevoFormularioEnviado($request->empresa, 'Brief de Pauta Cerrada'));
+        Mail::to('nquiroga@dosisagency.com')->send(new NuevoFormularioEnviado($request->empresa, 'Brief de Pauta por Objetivos'));
 
-        return redirect('brief_pauta_cerrada')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia.');
+        return redirect('brief_pauta_objetivos')->with('mensaje', 'El brief fue registrado con éxito y enviado a la agencia.');
     }
 
     /**

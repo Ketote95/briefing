@@ -8,7 +8,7 @@
         <div class="contenedor-formulario mt-5 pt-5 pb-5">
             <div class="row justify-content-md-center">
                 <div class="col col-lg col-md-6 col-sm-12">
-                    <h1 class="text-center title-brief" >Brief Publicitario para<br>Evaluación de Costos de Pauta</h1>
+                    <h1 class="text-center title-brief" >Brief de Pauta<br>por Objetivos</h1>
                 </div>
             </div>  
 
@@ -30,7 +30,7 @@
                     {{Session::get('mensaje')}}
                     <br><p>Una vez cerrada esta ventana, no es posible volver a generar el enlace.</p>
                     <hr>
-                    <a style="text-align: center" target="_blank" href="{{ url("/publicitario/pdf/") }}" class="alert-link">Descargar PDF</a>
+                    <a style="text-align: center" target="_blank" href="{{ url("/pauta/pdf/") }}" class="alert-link">Descargar PDF</a>
                 </div>
             @endif
 
@@ -57,7 +57,7 @@
                 <label style="color: #2F277A" class="nav-link shadow-sm step8">Paso 9</label>
             </div>
 
-            <form class="formulario-pautas p-5" action="{{url('brief_pauta_cerrada')}}" method="POST">
+            <form class="formulario-pautas p-5" action="{{url('brief_pauta_objetivos')}}" method="POST">
                 {{-- Campos de información general --}}
                 @csrf
                 <div class="form-section">

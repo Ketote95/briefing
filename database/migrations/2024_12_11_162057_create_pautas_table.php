@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('pautas', function (Blueprint $table) {
             $table->id();
+            $table->boolean('estado')->default(0);
             $table->string('empresa', 60);
             $table->string('marca', 50);
             $table->string('industria', 50);
@@ -20,7 +21,7 @@ return new class extends Migration
             $table->string('presencia_actual', 80);
             $table->string('competidores', 100);
             $table->string('nombre_contacto', 80);
-            $table->string('puesto_contacto', 50);
+            $table->string('puesto_contacto', 120);
             $table->string('telefono_contacto', 30);
             $table->string('correo_contacto', 70);
             $table->text('objetivo_general');

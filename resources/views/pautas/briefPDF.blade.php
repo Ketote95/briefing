@@ -91,7 +91,7 @@
         </footer>
 
         <!-- Wrap the content of your PDF inside a main tag -->
-        <p style="text-align: center; margin-bottom: 40px;" class="titulos">BRIEF PUBLICITARIO PARA EVALUACIÓN DE COSTOS DE PAUTA</p>
+        <p style="text-align: center; margin-bottom: 40px;" class="titulos">BRIEF DE PAUTA POR OBJETIVOS</p>
 
         {{-- Fila de empresa, categoría y marca --}}
         <table style="border-bottom: 1px dotted #2F277A;" class="table">

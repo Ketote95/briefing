@@ -14,11 +14,11 @@
             <div style="text-align: justify" class="alert alert-light mx-5 mb-2" role="alert">
                 Estimado partner: <br>
                 <br>
-                Si llegaste hasta aquí, es porque has decidido depositar tu confianza en nuestro equipo y para nosotros eso representa un gran valor y compromiso de éxito.<br>
+                Si llegaste hasta aquí, es porque has decidido depositar tu confianza en nuestro equipo, y para nosotros, eso representa un gran valor y compromiso.<br>
                 <br>
-                El propósito de las siguientes preguntas es obtener la mayor cantidad de información referente a tu empresa; ayudándonos a comprender su situación actual, fortalezas, oportunidades, objetivos y desventajas; permitiéndonos de esta manera, articular estrategias de comunicación que aporten valor y crecimiento.<br>
+                El objetivo de las siguientes preguntas es recopilar la mayor cantidad de información sobre tu campaña. Al comprender mejor sus objetivos, podremos desarrollar estrategias efectivas que contribuyan a su éxito.<br>
                 <br>
-                Por tal motivo, es de gran importancia que te tomes el tiempo suficiente para completar cada una de ellas.
+                Por ello, te invitamos a tomarte el tiempo necesario para responder cada pregunta con detalle.
             </div>
 
             {{-- Sección de la notificación --}}
